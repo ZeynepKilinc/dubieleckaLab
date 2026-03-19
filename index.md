@@ -3,7 +3,7 @@
 
 # Dubielecka Lab
 
-We study age-related changes in the hematopoietic system and how the output of hematopoietic stem cells changes with age. We focus on the mechanisms of inflammatory signaling and the homeostasis of hematopoietic stem cells in the aging bone marrow microenvironment.
+We study the bone marrow niche and its role in regulating hematopoietic and leukemic stem cells during aging and disease. By linking fundamental biology with translational research, we work to discover targets that can improve treatment for hematologic malignancies.
 
 {% include section.html %}
 
@@ -11,7 +11,7 @@ We study age-related changes in the hematopoietic system and how the output of h
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Explore our research and publications on the bone marrow microenvironment, stem cell aging, and blood cancer.
 
 {%
   include button.html
@@ -26,7 +26,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/bonaletal.png"
   link="research"
   title="Our Research"
   text=text
