@@ -3,7 +3,7 @@ name: Patrycja Dubielecka
 image: images/photo.jpg
 role: principal-investigator
 links:
-  home-page: [https://janesmith.com](https://vivo.brown.edu/display/pdubiele)
+  home-page: https://janesmith.com](https://vivo.brown.edu/display/pdubiele
   orcid: 0000-0003-3987-0647
 ---
 
