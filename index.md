@@ -1,9 +1,9 @@
 ---
 ---
 
-# ZeynepKilinc's Website
+# Dubielecka Lab
 
-An engaging 1-3 sentence description of your lab.
+We study age-related changes in the hematopoietic system and how the output of hematopoietic stem cells changes with age. We focus on the mechanisms of inflammatory signaling and the homeostasis of hematopoietic stem cells in the aging bone marrow microenvironment.
 
 {% include section.html %}
 
