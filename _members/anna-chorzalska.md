@@ -1,7 +1,7 @@
 ---
-name: John Doe
+name: Anna Chorzalska
 image: images/photo.jpg
-role: phd
+role: 
 group: alum
 links:
   github: john-doe
