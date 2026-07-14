@@ -1,6 +1,9 @@
 # site properties and page defaults
-title: ZeynepKilinc
+title: DUBIELECKA LAB
 subtitle: 
+show-title: false
+show-subtitle: false
+logo-text: false
 description: An engaging 1-3 sentence description of your lab.
 header: images/background.jpg
 footer: images/background.jpg
@@ -8,12 +11,12 @@ proofer: false
 
 # site social media and other links
 links:
-  email: contact@ZeynepKilinc.com
+  email: contact@DUBIELECKA LAB.com
   orcid: 0000-0001-8713-9213
   google-scholar: ETJoidYAAAAJ
-  github: ZeynepKilinc
-  twitter: ZeynepKilinc
-  youtube: ZeynepKilinc
+  github: DUBIELECKA LAB
+  twitter: DUBIELECKA LAB
+  youtube: DUBIELECKA LAB
 
 ### jekyll settings
 

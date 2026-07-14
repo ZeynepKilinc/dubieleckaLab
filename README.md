@@ -3,8 +3,8 @@
   ![on-pull-request](../../actions/workflows/on-pull-request.yaml/badge.svg)
   ![on-schedule](../../actions/workflows/on-schedule.yaml/badge.svg)
 
-  # ZeynepKilinc's Website
+  # DUBIELECKA LAB Website
 
-  Visit **[zeynepkilinc.github.io/dubieleckaLab](https://zeynepkilinc.github.io/dubieleckaLab)** 🚀
+  Visit **DUBIELECKA LAB** 🚀
 
   _Built with [Lab Website Template](https://greene-lab.gitbook.io/lab-website-template-docs)_

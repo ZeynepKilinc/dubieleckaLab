@@ -10,10 +10,11 @@ $wrap: 800px;
 
 .post-excerpt {
   display: flex;
+  gap: 20px;
   margin: 20px 0;
+  padding: 20px;
   border-radius: var(--rounded);
   background: var(--background);
-  overflow: hidden;
   box-shadow: var(--shadow);
 }
 
@@ -21,7 +22,8 @@ $wrap: 800px;
   position: relative;
   width: $thumb-size;
   flex-shrink: 0;
-  // box-shadow: var(--shadow);
+  overflow: hidden;
+  border-radius: var(--rounded);
 }
 
 .post-excerpt-image img {
@@ -36,7 +38,7 @@ $wrap: 800px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px 30px;
+  padding: 0 10px;
   text-align: left;
 }
 

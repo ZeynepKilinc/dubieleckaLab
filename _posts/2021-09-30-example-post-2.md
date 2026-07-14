@@ -1,5 +1,6 @@
 ---
 title: Example post 2
+hidden: true
 author: jane-smith
 ---
 

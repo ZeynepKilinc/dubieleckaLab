@@ -1,23 +1,71 @@
-- id: doi:10.1371/journal.pcbi.1007128
+- id: doi:10.1182/blood.2024027125
   type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  date: 2020-12-4
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
-  buttons:
-    - type: manubot
-      link: https://greenelab.github.io/meta-review/
-    - type: source
-      text: Manuscript Source
-      link: https://github.com/greenelab/meta-review
-    - type: website
-      link: http://manubot.org/
+  image: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/38eb/13077795/810ad6daffd7/nihms-2161683-f0001.jpg
+  description: Reports that a low-frequency JAK2V617F clone can drive myeloproliferative neoplasm pathology, highlighting how early malignant clones reshape the hematopoietic system.
+  date: 2025-11-13
   tags:
-    - open science
-    - collaboration
-  repo: greenelab/meta-review
+    - myeloproliferative neoplasms
+    - JAK2V617F
+    - hematopoietic stem cells
+  buttons:
+    - type: external
+      text: Brown profile
+      link: https://vivo.brown.edu/display/pdubiele#Publications
 
-- id: doi:10.1016/j.csbj.2020.05.017
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+- id: doi:10.1182/bloodadvances.2025018724
+  type: paper
+  image: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4869/12955636/8f1aa8542ae3/BLOODA_ADV-2025-018724-ga1.jpg
+  description: Examines how statin use relates to cardiovascular and hematologic outcomes in patients with myeloproliferative neoplasms.
+  date: 2026-02-27
+  tags:
+    - myeloproliferative neoplasms
+    - cardiovascular outcomes
+    - clinical hematology
 
-- id: doi:10.7554/eLife.32822
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+- id: doi:10.1182/bloodadvances.2025019152
+  type: paper
+  image: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/9e16/13216703/51919d9ec5bf/BLOODA_ADV-2025-019152-ga1.jpg
+  description: Identifies low serum cholesterol as a biomarker associated with advanced disease and poor outcomes in myeloproliferative neoplasms.
+  date: 2026-05-26
+  tags:
+    - myeloproliferative neoplasms
+    - biomarkers
+    - clinical outcomes
+
+- id: doi:10.1111/bjh.20089
+  type: paper
+  description: Characterizes humoral immune alterations in sickle cell disease, extending the lab's immunophenotyping work in hematologic disease.
+  date: 2025-05-14
+  tags:
+    - sickle cell disease
+    - immunophenotyping
+    - hematology
+
+- id: doi:10.1186/s12964-024-01738-z
+  type: paper
+  image: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/3cbe/11446139/a101b2b2723d/12964_2024_1738_Fig1_HTML.jpg
+  description: Reviews the role of the adaptor protein Abelson interactor 1 in homeostasis and disease.
+  date: 2024-10-01
+  tags:
+    - Abelson interactor 1
+    - signaling
+    - disease mechanisms
+
+- id: doi:10.1093/jleuko/qiae130
+  type: paper
+  image: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/3448/11531810/e9eb8189ddd0/qiae130f1.jpg
+  description: Reviews emerging links between complement cascade deficiencies and the pathology of myeloid malignancies.
+  date: 2024-06-05
+  tags:
+    - complement
+    - myeloid malignancies
+    - inflammation
+
+- id: doi:10.1002/1878-0261.13374
+  type: paper
+  description: Uses proximity proteomics to define how Abelson interactor 1 regulates TAK1/RIPK1 signaling.
+  date: 2023-05-12
+  tags:
+    - proximity proteomics
+    - Abi1
+    - TAK1/RIPK1 signaling

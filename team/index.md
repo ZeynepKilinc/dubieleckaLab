@@ -7,29 +7,37 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %}Team
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+The Dubielecka Lab brings together trainees, scientists, and clinical collaborators studying age-related hematologic malignancies, inflammatory signaling, and the biology of disease-initiating hematopoietic stem cells.
 
 {% include section.html %}
 
-{% include list.html data="members" component="portrait" filter="role == 'pi'" %}
-{% include list.html data="members" component="portrait" filter="role != 'pi'" %}
-
-{% include section.html background="images/background.jpg" dark=true %}
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+{% include portrait.html lookup="patrycja-dubielecka" %}
+{% include portrait.html lookup="anna-chorzalska" %}
+{% include portrait.html lookup="makayla-pardo" %}
+{% include portrait.html lookup="janet-joseph" %}
+{% include portrait.html lookup="james" %}
+{% include portrait.html lookup="valeria-brown" %}
+{% include portrait.html lookup="cristina-huezo-arguello" %}
+{% include portrait.html lookup="zeynep-kilinc" %}
+{% include portrait.html lookup="melanie-villalobos" %}
+{% include portrait.html lookup="john-jack-pulford" %}
+{% include portrait.html lookup="paola-sundaram" %}
 
 {% include section.html %}
 
-{% capture content %}
+## Alumni
 
-{% include figure.html image="images/photo.jpg" %}
-{% include figure.html image="images/photo.jpg" %}
-{% include figure.html image="images/photo.jpg" %}
-
-{% endcapture %}
-
-{% include grid.html style="square" content=content %}
+<div class="past-members">
+  {% for member in site.data.past_members %}
+    {%
+      include past-member.html
+      image=member.image
+      name=member.name
+      lab_position=member.lab_position
+      next_position=member.next_position
+      left=member.left
+      link=member.link
+      placeholder=member.placeholder
+    %}
+  {% endfor %}
+</div>

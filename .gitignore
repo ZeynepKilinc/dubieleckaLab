@@ -3,6 +3,12 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+.bundle
+.gem
+.python-packages
+.tmp-*.html
+_cite/.cache/*.db-shm
+_cite/.cache/*.db-wal
 debug.log
 __pycache__
 .DS_STORE

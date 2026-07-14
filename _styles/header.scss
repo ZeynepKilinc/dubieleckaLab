@@ -1,8 +1,8 @@
 ---
 ---
 
-$logo-big: 160px;
-$logo: 80px;
+$logo-big: 230px;
+$logo: 115px;
 $big-padding: 100px;
 $collapse: 700px;
 $sticky: true;
@@ -99,8 +99,9 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 24px;
   font-family: var(--heading);
+  font-size: 1.35rem;
   text-transform: uppercase;
 }
 
@@ -127,6 +128,7 @@ header:not([data-big]) {
     nav {
       align-items: flex-end;
       flex-direction: column;
+      font-size: var(--large);
       width: 100%;
     }
   }
@@ -164,5 +166,9 @@ header[data-big] {
 
   .subtitle {
     font-size: var(--large);
+  }
+
+  nav {
+    font-size: 1.55rem;
   }
 }

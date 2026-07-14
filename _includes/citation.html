@@ -11,6 +11,12 @@
 <div class="citation-container">
   <div class="citation">
     {% if include.style == "rich" %}
+      {% assign image = citation.image | default: "" %}
+      {% if image contains "://" %}
+        {% assign image = image | uri_escape %}
+      {% else %}
+        {% assign image = image | relative_url | uri_escape %}
+      {% endif %}
       <a
         {% if citation.link %}
           href="{{ citation.link | relative_url | uri_escape }}"
@@ -19,7 +25,7 @@
         aria-label="{{ citation.title | default: "citation link" | regex_strip }}"
       >
         <img
-          src="{{ citation.image | relative_url | uri_escape }}"
+          src="{{ image }}"
           alt="{{ citation.title | default: "citation image" | regex_strip }}"
           loading="lazy"
           {% include fallback.html %}

@@ -1,14 +1,32 @@
 ---
-title: Blog
+title: News
 nav:
   order: 4
-  tooltip: Musings and miscellany
+  tooltip: Lab news and highlights
 ---
 
-# {% include icon.html icon="fa-solid fa-feather-pointed" %}Blog
+# {% include icon.html icon="fa-regular fa-newspaper" %}News
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+## Highlights
+
+<div class="news-highlights">
+  <section>
+    <h3>2026</h3>
+    <ul>
+      <li>New Dubielecka Lab website launched with updated research, team, and alumni pages.</li>
+      <li>The lab continues to study aging-associated inflammation and blood cancer-initiating stem cells.</li>
+      <li>New trainees joined the lab across Pathobiology, Computational Molecular Biology, and Molecular Biology programs.</li>
+    </ul>
+  </section>
+  <section>
+    <h3>2025</h3>
+    <ul>
+      <li>Lab members advanced projects focused on hematopoietic stem cells and the malignant microenvironment.</li>
+      <li>Recent publications and collaborative research updates were added to the Research page.</li>
+      <li>Alumni milestones and lab member updates will be collected here as news items are added.</li>
+    </ul>
+  </section>
+</div>
 
 {% include section.html %}
 
@@ -18,4 +36,4 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 {% include search-info.html %}
 
-{% include list.html data="posts" component="post-excerpt" %}
+{% include list.html data="posts" component="post-excerpt" filter="hidden != true" %}

@@ -1,0 +1,26 @@
+{{ " " }}
+<div class="past-member-card{% if include.placeholder %} is-placeholder{% endif %}">
+  <div class="past-member-image">
+    <img
+      src="{{ include.image | relative_url | uri_escape }}"
+      alt="{{ include.name | default: "past member portrait" | regex_strip }}"
+      loading="lazy"
+      {% include fallback.html %}
+    >
+  </div>
+  <div class="past-member-details">
+    {% if include.link %}
+      <a href="{{ include.link | relative_url | uri_escape }}" class="past-member-name">
+        {{ include.name }}
+      </a>
+    {% else %}
+      <p class="past-member-name">{{ include.name }}</p>
+    {% endif %}
+    {% if include.lab_position %}
+      <p>{{ include.lab_position }}</p>
+    {% endif %}
+    {% if include.next_position %}
+      <p><strong>Next Position:</strong> {{ include.next_position }}</p>
+    {% endif %}
+  </div>
+</div>

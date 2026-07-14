@@ -1,6 +1,6 @@
 ---
 name: Patrycja Dubielecka
-image: images/photo.jpg
+image: images/members/patrycja-dubielecka.png
 role: principal-investigator
 links:
   home-page: https://vivo.brown.edu/display/pdubiele

@@ -13,6 +13,7 @@
     {% assign url = post.url | relative_url | uri_escape %}
     {% assign title = post.title %}
     {% assign image = post.image | relative_url | uri_escape %}
+    {% assign carousel_images = post.carousel_images | default: include.carousel_images %}
 
     {% if image %}
       <a
@@ -22,6 +23,20 @@
       >
         <img
           src="{{ image }}"
+          alt="{{ title | default: "excerpt image" | regex_strip }}"
+          loading="lazy"
+          {% include fallback.html %}
+        >
+      </a>
+    {% elsif carousel_images %}
+      {% assign preview_image = carousel_images | first | relative_url | uri_escape %}
+      <a
+        href="{{ url }}"
+        class="post-excerpt-image"
+        aria-label="{{ title | default: "excerpt link" | regex_strip }}"
+      >
+        <img
+          src="{{ preview_image }}"
           alt="{{ title | default: "excerpt image" | regex_strip }}"
           loading="lazy"
           {% include fallback.html %}

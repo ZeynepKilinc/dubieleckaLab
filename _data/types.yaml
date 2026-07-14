@@ -14,6 +14,22 @@ phd:
   icon: fa-solid fa-graduation-cap
   description: PhD Student
 
+pathobiology:
+  icon: fa-solid fa-microscope
+  description: Pathobiology Graduate Student
+
+computational-molecular-biology:
+  icon: fa-solid fa-laptop-code
+  description: Computational Molecular Biology Graduate Student
+
+molecular-biology:
+  icon: fa-solid fa-dna
+  description: Molecular Biology Graduate Student
+
+masters:
+  icon: fa-solid fa-user-graduate
+  description: Master's Student
+
 undergrad:
   icon: fa-solid fa-user-graduate
   description: Undergraduate Student
