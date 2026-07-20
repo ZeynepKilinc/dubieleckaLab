@@ -5,20 +5,20 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  width: 175px;
+  width: 190px;
   max-width: calc(100% - 20px - 20px);
   margin: 20px;
   vertical-align: top;
 }
 
 .portrait {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: flex;
   flex-direction: column;
   width: 100%;
+  overflow: visible;
+  border-radius: 8px;
   text-decoration: none;
+  box-shadow: var(--shadow);
 }
 
 .portrait-wrapper:has(.portrait[data-style="small"]) {
@@ -37,37 +37,17 @@
   margin: 10px;
 }
 
-.portrait .icon {
-  position: absolute;
-  left: 0;
-  top: 0;
+.portrait-image-link {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(20px + 10%);
-  aspect-ratio: 1 / 1;
-  border-radius: 999px;
-  background: var(--background);
-  box-shadow: var(--shadow);
-  transform: translate(14%, 14%);
-}
-
-.portrait[data-style="small"] .icon {
-  left: -2px;
-  top: -2px;
-}
-
-.portrait[data-style="tiny"] .icon {
-  display: none;
+  width: 100%;
+  text-decoration: none;
 }
 
 .portrait-image {
   width: 100%;
-  margin-bottom: 20px;
-  aspect-ratio: 4 / 5;
-  border-radius: 8px;
+  aspect-ratio: 4 / 4.25;
+  border-radius: 8px 8px 0 0;
   object-fit: cover;
-  box-shadow: var(--shadow);
 }
 
 .portrait[data-style="tiny"] .portrait-image {
@@ -77,26 +57,100 @@
   border-radius: 999px;
 }
 
+.portrait-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 116px;
+  padding: 18px 12px 16px;
+  border-radius: 0 0 8px 8px;
+  background: var(--background);
+  text-align: center;
+}
+
 .portrait-name {
+  color: var(--text);
   font-family: var(--heading);
   font-weight: var(--semi-bold);
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.portrait-name:hover {
+  color: var(--rust);
+}
+
+.portrait-description,
+.portrait-affiliation {
+  margin-top: 6px;
+  color: var(--gray);
+  font-size: 0.82rem;
+  line-height: 1.25;
+}
+
+.portrait-contact {
+  position: relative;
+  margin-top: auto;
+  padding-top: 10px;
+}
+
+.portrait-contact-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
+  border-radius: 999px;
+  color: var(--primary);
+  cursor: pointer;
+  list-style: none;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.portrait-contact-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.portrait-contact-toggle::marker {
+  content: "";
+}
+
+.portrait-contact-toggle:hover {
+  background: var(--stone);
+  color: var(--rust);
+}
+
+.portrait-contact[open] .portrait-contact-toggle {
+  transform: rotate(180deg);
 }
 
 .portrait-socials {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  z-index: 2;
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin-top: 8px;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--light-gray);
+  border-radius: 999px;
+  background: var(--background);
+  box-shadow: var(--shadow);
+  transform: translateX(-50%);
 }
 
 .portrait-social {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
+  width: 42px;
   aspect-ratio: 1 / 1;
   border-radius: 999px;
   color: var(--primary);
+  font-size: 1.3rem;
   text-decoration: none;
   transition: background var(--transition), color var(--transition);
 }
@@ -108,11 +162,8 @@
 
 .portrait[data-style="tiny"] {
   .portrait-description,
-  .portrait-affiliation {
+  .portrait-affiliation,
+  .portrait-contact {
     display: none;
   }
-}
-
-.portrait[data-style="tiny"] + .portrait-socials {
-  display: none;
 }

@@ -7,9 +7,9 @@ nav:
 
 # {% include icon.html icon="fa-solid fa-users" %}Team
 
-The Dubielecka Lab brings together trainees, scientists, and clinical collaborators studying age-related hematologic malignancies, inflammatory signaling, and the biology of disease-initiating hematopoietic stem cells.
+<div class="team-page"></div>
 
-{% include section.html %}
+The Dubielecka Lab brings together trainees, scientists, and clinical collaborators studying age-related hematologic malignancies, inflammatory signaling, and the biology of disease-initiating hematopoietic stem cells.
 
 {% include portrait.html lookup="patrycja-dubielecka" %}
 {% include portrait.html lookup="anna-chorzalska" %}
@@ -21,8 +21,6 @@ The Dubielecka Lab brings together trainees, scientists, and clinical collaborat
 {% include portrait.html lookup="zeynep-kilinc" %}
 {% include portrait.html lookup="melanie-villalobos" %}
 {% include portrait.html lookup="john-jack-pulford" %}
-
-{% include section.html %}
 
 ## Alumni
 

@@ -11,41 +11,6 @@
 {% assign asset_version = site.time | date: "%s" %}
 
 <div class="portrait-wrapper">
-  <a
-    {% if page.slug != member.slug %}
-      href="{{ member.url | relative_url | uri_escape }}"
-    {% endif %}
-    class="portrait"
-    data-style="{{ include.style }}"
-    aria-label="{{ member.name | default: "member link" | regex_strip }}"
-  >
-    <img
-      src="{{ member.image | relative_url | uri_escape }}?v={{ asset_version }}"
-      class="portrait-image"
-      alt="member portrait"
-      loading="lazy"
-      {% include fallback.html %}
-    >
-
-    {% if member.name %}
-      <span class="portrait-name">
-        {{ member.name }}
-      </span>
-    {% endif %}
-
-    {% if member.description or type %}
-      <span class="portrait-description">
-        {{ member.description | default: type.description }}
-      </span>
-    {% endif %}
-
-    {% if member.affiliation %}
-      <span class="portrait-affiliation">
-        {{ member.affiliation }}
-      </span>
-    {% endif %}
-  </a>
-
   {% assign social_keys = "orcid,linkedin,google-scholar" | split: "," %}
   {% assign has_social_links = false %}
   {% for key in social_keys %}
@@ -54,27 +19,79 @@
     {% endif %}
   {% endfor %}
 
-  {% if has_social_links %}
-    <div class="portrait-socials">
-      {% for key in social_keys %}
-        {% assign value = member.links[key] %}
-        {% if value %}
-          {% assign social = site.data.types[key] %}
-          {% if value contains "http" %}
-            {% assign link = value %}
-          {% else %}
-            {% assign link = social.link | replace: "$VALUE", value %}
+  <div class="portrait" data-style="{{ include.style }}">
+    <a
+      {% if page.slug != member.slug %}
+        href="{{ member.url | relative_url | uri_escape }}"
+      {% endif %}
+      class="portrait-image-link"
+      aria-label="{{ member.name | default: "member link" | regex_strip }}"
+    >
+      <img
+        src="{{ member.image | relative_url | uri_escape }}?v={{ asset_version }}"
+        class="portrait-image"
+        alt="member portrait"
+        loading="lazy"
+        {% include fallback.html %}
+      >
+    </a>
+
+    <div class="portrait-info">
+      {% if member.name %}
+        <a
+          {% if page.slug != member.slug %}
+            href="{{ member.url | relative_url | uri_escape }}"
           {% endif %}
-          <a
-            href="{{ link | uri_escape }}"
-            class="portrait-social"
-            data-tooltip="{{ social.tooltip }}"
-            aria-label="{{ member.name }} {{ social.tooltip }}"
+          class="portrait-name"
+        >
+          {{ member.name }}
+        </a>
+      {% endif %}
+
+      {% if member.description or type %}
+        <span class="portrait-description">
+          {{ member.description | default: type.description }}
+        </span>
+      {% endif %}
+
+      {% if member.affiliation %}
+        <span class="portrait-affiliation">
+          {{ member.affiliation }}
+        </span>
+      {% endif %}
+
+      {% if has_social_links %}
+        <details class="portrait-contact">
+          <summary
+            class="portrait-contact-toggle"
+            data-tooltip="Contact links"
+            aria-label="{{ member.name }} contact links"
           >
-            {% include icon.html icon=social.icon %}
-          </a>
-        {% endif %}
-      {% endfor %}
+            {% include icon.html icon="fa-solid fa-chevron-down" %}
+          </summary>
+          <div class="portrait-socials">
+            {% for key in social_keys %}
+              {% assign value = member.links[key] %}
+              {% if value %}
+                {% assign social = site.data.types[key] %}
+                {% if value contains "http" %}
+                  {% assign link = value %}
+                {% else %}
+                  {% assign link = social.link | replace: "$VALUE", value %}
+                {% endif %}
+                <a
+                  href="{{ link | uri_escape }}"
+                  class="portrait-social"
+                  data-tooltip="{{ social.tooltip }}"
+                  aria-label="{{ member.name }} {{ social.tooltip }}"
+                >
+                  {% include icon.html icon=social.icon %}
+                </a>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </details>
+      {% endif %}
     </div>
-  {% endif %}
+  </div>
 </div>
