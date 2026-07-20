@@ -1,0 +1,61 @@
+.home-lab-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.home-lab-copy h1 {
+  margin-top: 0;
+}
+
+.home-lab-carousel {
+  position: relative;
+  aspect-ratio: 4/5;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  background: var(--background-alt);
+}
+
+.home-lab-carousel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: home-lab-fade 15s infinite;
+}
+
+.home-lab-carousel img:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.home-lab-carousel img:nth-child(3) {
+  animation-delay: 10s;
+}
+
+@keyframes home-lab-fade {
+  0%, 8% {
+    opacity: 0;
+  }
+  15%, 38% {
+    opacity: 1;
+  }
+  45%, 100% {
+    opacity: 0;
+  }
+}
+@media (max-width: 900px) {
+  .home-lab-intro {
+    grid-template-columns: 1fr;
+  }
+  .home-lab-carousel {
+    aspect-ratio: 16/10;
+    min-height: 300px;
+  }
+}
+
+/*# sourceMappingURL=home.css.map */

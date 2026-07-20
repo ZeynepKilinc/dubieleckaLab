@@ -27,7 +27,7 @@ header a {
 }
 
 .logo {
-  height: 80px;
+  height: 115px;
 }
 
 .logo > * {
@@ -87,8 +87,9 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 24px;
   font-family: var(--heading);
+  font-size: 1.35rem;
   text-transform: uppercase;
 }
 
@@ -113,6 +114,7 @@ nav > a:hover {
   header:not([data-big]) nav {
     align-items: flex-end;
     flex-direction: column;
+    font-size: var(--large);
     width: 100%;
   }
 }
@@ -129,7 +131,7 @@ header[data-big] .home {
   flex-grow: 0;
 }
 header[data-big] .logo {
-  height: 160px;
+  height: 230px;
   flex-shrink: 0;
 }
 header[data-big] .title-text {
@@ -142,6 +144,9 @@ header[data-big] .title {
 }
 header[data-big] .subtitle {
   font-size: var(--large);
+}
+header[data-big] nav {
+  font-size: 1.55rem;
 }
 
 /*# sourceMappingURL=header.css.map */
