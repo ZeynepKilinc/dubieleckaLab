@@ -31,6 +31,7 @@
 {%- endcapture %}
 
 {% assign description = description | xml_escape %}
+{% assign asset_version = site.time | date: "%s" %}
 
 {% assign png = "images/icon.png" | file_exists %}
 {% assign jpg = "images/icon.jpg" | file_exists %}
@@ -49,7 +50,7 @@
 
 <title>{{ fulltitle }}</title>
 
-<link rel="icon" href="{{ icon }}">
+<link rel="icon" href="{{ icon }}?v={{ asset_version }}">
 
 <meta name="title" content="{{ title }}">
 <meta name="description" content="{{ description }}">
@@ -58,14 +59,14 @@
 <meta property="og:site_title" content="{{ site.title | xml_escape }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:url" content="{{ url }}">
-<meta property="og:image" content="{{ share }}">
+<meta property="og:image" content="{{ share }}?v={{ asset_version }}">
 <meta property="og:locale" content="en_US">
 
 <meta property="twitter:title" content="{{ title }}">
 <meta property="twitter:description" content="{{ description }}">
 <meta property="twitter:url" content="{{ url }}">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="{{ share }}">
+<meta property="twitter:image" content="{{ share }}?v={{ asset_version }}">
 
 {% if page.author %}
   <meta name="author" content="{{ page.author | xml_escape }}">
@@ -94,7 +95,7 @@
     "headline": "{{ title }}",
     "publisher": {
       "@type": "Organization",
-      "logo": { "@type": "ImageObject", "url": "{{ icon }}" }
+      "logo": { "@type": "ImageObject", "url": "{{ icon }}?v={{ asset_version }}" }
     },
     "url": "{{ url }}"
   }

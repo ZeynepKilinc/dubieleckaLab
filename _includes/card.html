@@ -1,4 +1,5 @@
 {{ " " }}
+{% assign asset_version = site.time | date: "%s" %}
 <div class="card" data-style="{{ include.style }}">
   <a
     {% if include.link %}
@@ -8,7 +9,7 @@
     class="card-image"
   >
     <img
-      src="{{ include.image | relative_url | uri_escape }}"
+      src="{{ include.image | relative_url | uri_escape }}?v={{ asset_version }}"
       alt="{{ include.title | default: "card image" | regex_strip }}"
       loading="lazy"
       {% include fallback.html %}

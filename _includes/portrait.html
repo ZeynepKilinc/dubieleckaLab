@@ -8,6 +8,7 @@
 {% endif %}
 
 {% assign type = site.data.types[member.role] %}
+{% assign asset_version = site.time | date: "%s" %}
 
 <div class="portrait-wrapper">
   <a
@@ -19,7 +20,7 @@
     aria-label="{{ member.name | default: "member link" | regex_strip }}"
   >
     <img
-      src="{{ member.image | relative_url | uri_escape }}"
+      src="{{ member.image | relative_url | uri_escape }}?v={{ asset_version }}"
       class="portrait-image"
       alt="member portrait"
       loading="lazy"

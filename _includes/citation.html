@@ -7,6 +7,7 @@
 {% else %}
   {% assign citation = include %}
 {% endif %}
+{% assign asset_version = site.time | date: "%s" %}
 
 <div class="citation-container">
   <div class="citation">
@@ -15,7 +16,7 @@
       {% if image contains "://" %}
         {% assign image = image | uri_escape %}
       {% else %}
-        {% assign image = image | relative_url | uri_escape %}
+        {% assign image = image | relative_url | uri_escape | append: "?v=" | append: asset_version %}
       {% endif %}
       <a
         {% if citation.link %}

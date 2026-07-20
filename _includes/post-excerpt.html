@@ -10,6 +10,7 @@
 
 <div class="post-excerpt-container">
   <div class="post-excerpt">
+    {% assign asset_version = site.time | date: "%s" %}
     {% assign url = post.url | relative_url | uri_escape %}
     {% assign title = post.title %}
     {% assign image = post.image | relative_url | uri_escape %}
@@ -22,7 +23,7 @@
         aria-label="{{ title | default: "excerpt link" | regex_strip }}"
       >
         <img
-          src="{{ image }}"
+          src="{{ image }}?v={{ asset_version }}"
           alt="{{ title | default: "excerpt image" | regex_strip }}"
           loading="lazy"
           {% include fallback.html %}
@@ -36,7 +37,7 @@
         aria-label="{{ title | default: "excerpt link" | regex_strip }}"
       >
         <img
-          src="{{ preview_image }}"
+          src="{{ preview_image }}?v={{ asset_version }}"
           alt="{{ title | default: "excerpt image" | regex_strip }}"
           loading="lazy"
           {% include fallback.html %}

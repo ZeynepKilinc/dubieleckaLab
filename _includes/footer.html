@@ -1,9 +1,10 @@
 {% assign image = page.footer | default: site.footer %}
 {% assign dark = page.footer-dark | is_nil: site.footer-dark | is_nil: true %}
+{% assign asset_version = site.time | date: "%s" %}
 
 <footer
   class="background"
-  style="--image: url('{{ image | relative_url | uri_escape }}')"
+  style="--image: url('{{ image | relative_url | uri_escape }}?v={{ asset_version }}')"
   {% if dark == true or dark == false %}
     data-dark="{{ dark }}"
   {% endif %}

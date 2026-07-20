@@ -1,5 +1,6 @@
 {% assign image = page.header | default: site.header %}
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
+{% assign asset_version = site.time | date: "%s" %}
 
 {% assign svg = "images/logodubiele.svg" | file_exists %}
 {% assign png = "images/logodubiele.png" | file_exists %}
@@ -8,7 +9,7 @@
 
 <header
   class="background"
-  style="--image: url('{{ image | relative_url | uri_escape }}')"
+  style="--image: url('{{ image | relative_url | uri_escape }}?v={{ asset_version }}')"
   {% if dark == true or dark == false %}
     data-dark="{{ dark }}"
   {% endif %}
@@ -22,7 +23,7 @@
         {% if svg %}
           {{ svg | file_read }}
         {% else %}
-          <img src="{{ logo | relative_url | uri_escape }}" alt="logo">
+          <img src="{{ logo | relative_url | uri_escape }}?v={{ asset_version }}" alt="logo">
         {% endif %}
       </span>
     {% endif %}

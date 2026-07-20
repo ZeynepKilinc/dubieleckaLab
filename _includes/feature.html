@@ -1,3 +1,5 @@
+{% assign asset_version = site.time | date: "%s" %}
+
 <div
   class="feature"
   {% if include.flip %}
@@ -12,7 +14,7 @@
     aria-label="{{ include.title | default: "feature link" | regex_strip }}"
   >
     <img
-      src="{{ include.image | relative_url | uri_escape }}"
+      src="{{ include.image | relative_url | uri_escape }}?v={{ asset_version }}"
       loading="lazy"
       alt="{{ include.title | default: "feature image" | regex_strip }}"
       {% include fallback.html %}

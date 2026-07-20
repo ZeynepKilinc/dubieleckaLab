@@ -1,3 +1,5 @@
+{% assign asset_version = site.time | date: "%s" %}
+
 <figure class="figure">
   <a
     {% if include.link %}
@@ -7,7 +9,7 @@
     aria-label="{{ include.caption | default: "figure link" | regex_strip }}"
   >
     <img
-      src="{{ include.image | relative_url | uri_escape }}"
+      src="{{ include.image | relative_url | uri_escape }}?v={{ asset_version }}"
       style="
         width: {{ include.width | default: "auto" }};
         max-height: {{ include.height | default: "unset" }};

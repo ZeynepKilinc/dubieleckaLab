@@ -1,8 +1,9 @@
 {{ " " }}
+{% assign asset_version = site.time | date: "%s" %}
 <div class="past-member-card{% if include.placeholder %} is-placeholder{% endif %}">
   <div class="past-member-image">
     <img
-      src="{{ include.image | relative_url | uri_escape }}"
+      src="{{ include.image | relative_url | uri_escape }}?v={{ asset_version }}"
       alt="{{ include.name | default: "past member portrait" | regex_strip }}"
       loading="lazy"
       {% include fallback.html %}
