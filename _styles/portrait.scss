@@ -2,7 +2,13 @@
 ---
 
 .portrait-wrapper {
-  display: contents;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 175px;
+  max-width: calc(100% - 20px - 20px);
+  margin: 20px;
+  vertical-align: top;
 }
 
 .portrait {
@@ -11,13 +17,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 20px;
-  width: 175px;
-  max-width: calc(100% - 20px - 20px);
+  width: 100%;
   text-decoration: none;
 }
 
-.portrait[data-style="small"] {
+.portrait-wrapper:has(.portrait[data-style="small"]) {
   width: 100px;
 }
 
@@ -26,6 +30,11 @@
   gap: 15px;
   width: unset;
   text-align: left;
+}
+
+.portrait-wrapper:has(.portrait[data-style="tiny"]) {
+  width: unset;
+  margin: 10px;
 }
 
 .portrait .icon {
@@ -73,9 +82,37 @@
   font-weight: var(--semi-bold);
 }
 
+.portrait-socials {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.portrait-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  aspect-ratio: 1 / 1;
+  border-radius: 999px;
+  color: var(--primary);
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.portrait-social:hover {
+  background: var(--stone);
+  color: var(--rust);
+}
+
 .portrait[data-style="tiny"] {
   .portrait-description,
   .portrait-affiliation {
     display: none;
   }
+}
+
+.portrait[data-style="tiny"] + .portrait-socials {
+  display: none;
 }

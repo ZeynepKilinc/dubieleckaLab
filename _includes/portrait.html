@@ -44,4 +44,36 @@
       </span>
     {% endif %}
   </a>
+
+  {% assign social_keys = "orcid,linkedin,google-scholar" | split: "," %}
+  {% assign has_social_links = false %}
+  {% for key in social_keys %}
+    {% if member.links[key] %}
+      {% assign has_social_links = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% if has_social_links %}
+    <div class="portrait-socials">
+      {% for key in social_keys %}
+        {% assign value = member.links[key] %}
+        {% if value %}
+          {% assign social = site.data.types[key] %}
+          {% if value contains "http" %}
+            {% assign link = value %}
+          {% else %}
+            {% assign link = social.link | replace: "$VALUE", value %}
+          {% endif %}
+          <a
+            href="{{ link | uri_escape }}"
+            class="portrait-social"
+            data-tooltip="{{ social.tooltip }}"
+            aria-label="{{ member.name }} {{ social.tooltip }}"
+          >
+            {% include icon.html icon=social.icon %}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
 </div>

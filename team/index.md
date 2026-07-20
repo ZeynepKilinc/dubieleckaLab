@@ -21,7 +21,6 @@ The Dubielecka Lab brings together trainees, scientists, and clinical collaborat
 {% include portrait.html lookup="zeynep-kilinc" %}
 {% include portrait.html lookup="melanie-villalobos" %}
 {% include portrait.html lookup="john-jack-pulford" %}
-{% include portrait.html lookup="paola-sundaram" %}
 
 {% include section.html %}
 
