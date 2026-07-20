@@ -1,0 +1,36 @@
+---
+---
+
+.photo-carousel-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  z-index: 3;
+  display: flex;
+  gap: 8px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  background: rgb(20 24 23 / 55%);
+  transform: translateX(-50%);
+}
+
+.photo-carousel-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 1px solid white;
+  border-radius: 999px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.photo-carousel-dot[aria-current="true"] {
+  background: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-lab-carousel img,
+  .news-photo-carousel img {
+    transition: none;
+  }
+}

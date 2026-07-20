@@ -1,11 +1,11 @@
 ---
-title: Research
+title: Publications
 nav:
   order: 1
   tooltip: Published works
 ---
 
-# {% include icon.html icon="fa-solid fa-microscope" %}Research
+# {% include icon.html icon="fa-solid fa-microscope" %}Publications
 
 The Dubielecka Lab studies how aging, chronic inflammation, and the bone marrow microenvironment shape hematopoietic stem cell behavior and the development, progression, and relapse of blood cancers. Our work focuses on myeloproliferative neoplasms and other hematologic disease settings where malignant stem cells interact with immune and stromal signals in their niche.
 
@@ -74,12 +74,20 @@ Recent work highlights low-frequency JAK2V617F clones, cardiovascular comorbidit
 
 ## Funding and Programs
 
-- NIH/NCI R01CA218079
-- NIH/NIGMS P20GM119943
-- NIH/NIGMS P30GM145500
-- Legorreta Cancer Center
-- Rhode Island Foundation
-- American Society of Hematology
+<div class="funding-logos">
+  <a href="https://www.nih.gov/" aria-label="National Institutes of Health">
+    <img src="{{ 'images/funding/nih.png' | relative_url }}" alt="National Institutes of Health">
+  </a>
+  <a href="https://legorreta.brown.edu/" aria-label="Legorreta Cancer Center">
+    <img src="{{ 'images/funding/legorreta.png' | relative_url }}" alt="Legorreta Cancer Center">
+  </a>
+  <a href="https://rifoundation.org/" aria-label="Rhode Island Foundation">
+    <img src="{{ 'images/funding/rhode-island-foundation.svg' | relative_url }}" alt="Rhode Island Foundation">
+  </a>
+  <a href="https://www.hematology.org/" aria-label="American Society of Hematology">
+    <img src="{{ 'images/funding/ash.svg' | relative_url }}" alt="American Society of Hematology">
+  </a>
+</div>
 
 {% include section.html %}
 

@@ -1,9 +1,12 @@
 - name: Dennis M. Bonal
   image: images/members/dennis-bonal.png
   lab_position: PhD Student
-- name: Max Peterson
+  current_position: Dana-Farber Cancer Institute
+- name: Max Petersen
   image: images/members/max-peterson.png
   lab_position: PhD Student
+  current_position: Postdoctoral Researcher, Brown University
 - name: Michael Clarke
   image: images/members/michael-clarke.png
   lab_position: Undergraduate Student
+  current_position: MD-PhD Student

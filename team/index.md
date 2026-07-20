@@ -5,14 +5,7 @@ nav:
   tooltip: About our team
 ---
 
-# {% include icon.html icon="fa-solid fa-users" %}Team
-
-<div class="team-page"></div>
-
-The Dubielecka Lab brings together trainees, scientists, and clinical collaborators studying age-related hematologic malignancies, inflammatory signaling, and the biology of disease-initiating hematopoietic stem cells.
-
 {% include portrait.html lookup="patrycja-dubielecka" %}
-{% include portrait.html lookup="anna-chorzalska" %}
 {% include portrait.html lookup="makayla-pardo" %}
 {% include portrait.html lookup="janet-joseph" %}
 {% include portrait.html lookup="james" %}
@@ -31,10 +24,16 @@ The Dubielecka Lab brings together trainees, scientists, and clinical collaborat
       image=member.image
       name=member.name
       lab_position=member.lab_position
+      current_position=member.current_position
       next_position=member.next_position
       left=member.left
       link=member.link
       placeholder=member.placeholder
     %}
   {% endfor %}
+</div>
+
+<div class="team-contribution contribution-callout">
+  <p>Lab members can submit or update their profile details here.</p>
+  <a class="contribution-button" href="https://forms.gle/kPJwxcjeDiJPEpaGA">Team member form</a>
 </div>

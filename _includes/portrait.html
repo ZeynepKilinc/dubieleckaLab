@@ -10,8 +10,8 @@
 {% assign type = site.data.types[member.role] %}
 {% assign asset_version = site.time | date: "%s" %}
 
-<div class="portrait-wrapper">
-  {% assign social_keys = "orcid,linkedin,google-scholar" | split: "," %}
+<div class="portrait-wrapper{% if page.slug == member.slug %} portrait-profile{% endif %}">
+  {% assign social_keys = "orcid,google-scholar,linkedin,twitter,github" | split: "," %}
   {% assign has_social_links = false %}
   {% for key in social_keys %}
     {% if member.links[key] %}
@@ -60,37 +60,28 @@
         </span>
       {% endif %}
 
-      {% if has_social_links %}
-        <details class="portrait-contact">
-          <summary
-            class="portrait-contact-toggle"
-            data-tooltip="Contact links"
-            aria-label="{{ member.name }} contact links"
-          >
-            {% include icon.html icon="fa-solid fa-chevron-down" %}
-          </summary>
-          <div class="portrait-socials">
-            {% for key in social_keys %}
-              {% assign value = member.links[key] %}
-              {% if value %}
-                {% assign social = site.data.types[key] %}
-                {% if value contains "http" %}
-                  {% assign link = value %}
-                {% else %}
-                  {% assign link = social.link | replace: "$VALUE", value %}
-                {% endif %}
-                <a
-                  href="{{ link | uri_escape }}"
-                  class="portrait-social"
-                  data-tooltip="{{ social.tooltip }}"
-                  aria-label="{{ member.name }} {{ social.tooltip }}"
-                >
-                  {% include icon.html icon=social.icon %}
-                </a>
+      {% if has_social_links and page.slug == member.slug %}
+        <div class="portrait-socials" aria-label="{{ member.name }} profile links">
+          {% for key in social_keys %}
+            {% assign value = member.links[key] %}
+            {% if value %}
+              {% assign social = site.data.types[key] %}
+              {% if value contains "http" %}
+                {% assign link = value %}
+              {% else %}
+                {% assign link = social.link | replace: "$VALUE", value %}
               {% endif %}
-            {% endfor %}
-          </div>
-        </details>
+              <a
+                href="{{ link | uri_escape }}"
+                class="portrait-social"
+                data-tooltip="{{ social.tooltip }}"
+                aria-label="{{ member.name }} {{ social.tooltip }}"
+              >
+                {% include icon.html icon=social.icon %}
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
       {% endif %}
     </div>
   </div>

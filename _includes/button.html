@@ -1,11 +1,16 @@
+{% assign direct_link = include.link %}
 {% assign button = include %}
 {% assign button = button | hash_default: site.data.types[include.type] %}
+{% assign final_link = button.link %}
+{% if direct_link contains "http://" or direct_link contains "https://" %}
+  {% assign final_link = direct_link %}
+{% endif %}
 
 {% if button.link or button.icon or button.text %}
   <div class="button-wrapper">
     <a
       class="button"
-      href="{{ button.link | replace: "$LINK", button.link | relative_url }}"
+      href="{{ final_link | replace: "$LINK", final_link | relative_url }}"
       {% if button.tooltip %}
         data-tooltip="{{ button.tooltip | xml_escape }}"
       {% endif %}

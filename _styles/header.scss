@@ -1,174 +1,158 @@
 ---
 ---
 
-$logo-big: 230px;
-$logo: 115px;
-$big-padding: 100px;
-$collapse: 700px;
-$sticky: true;
+$collapse: 760px;
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 20px;
+.site-header {
+  position: relative;
+  z-index: 10;
+  background: var(--background);
   box-shadow: var(--shadow);
-
-  @if $sticky {
-    position: sticky !important;
-    top: 0;
-    z-index: 10 !important;
-  }
 }
 
-header a {
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 92px;
+  padding: 14px max(28px, calc((100% - 1180px) / 2));
+  border-bottom: 3px solid var(--brown);
+}
+
+.header-bar a {
   color: var(--text);
   text-decoration: none;
 }
 
 .home {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 10px;
-  flex-basis: 0;
-  flex-grow: 1;
-  max-width: 100%;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .logo {
-  height: $logo;
+  display: block;
+  height: 64px;
 }
 
 .logo > * {
-  width: unset;
+  width: auto;
   height: 100%;
 }
 
 .title-text {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 5px;
-  min-width: 0;
   font-family: var(--title);
   text-align: left;
 }
 
 .title {
-  font-size: var(--large);
+  font-size: 1.55rem;
+  font-weight: var(--semi-bold);
+  letter-spacing: 0.02em;
 }
 
-.subtitle {
-  opacity: 0.65;
-  font-weight: var(--thin);
+.header-bar nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 26px;
+  font-family: var(--heading);
+  font-size: 1rem;
+}
+
+.header-bar nav > a {
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.header-bar nav > a:hover {
+  color: var(--rust);
+  border-bottom-color: var(--amber);
 }
 
 .nav-toggle {
   display: none;
   position: relative;
-  width: 30px;
-  height: 30px;
+  width: 34px;
+  height: 34px;
   margin: 0;
-  color: var(--text);
   appearance: none;
-  transition: background var(--transition);
 }
 
-.nav-toggle:after {
+.nav-toggle::after {
   content: "\f0c9";
   position: absolute;
-  left: 50%;
-  top: 50%;
-  color: var(--text);
-  font-size: 15px;
+  inset: 50% auto auto 50%;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   transform: translate(-50%, -50%);
 }
 
-.nav-toggle:checked:after {
+.nav-toggle:checked::after {
   content: "\f00d";
 }
 
-nav {
+.site-hero {
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
+  min-height: 360px;
+  padding: 45px max(40px, calc((100% - 1180px) / 2));
+  background-position: center;
+  box-sizing: border-box;
+  color: white;
+  text-align: left;
+}
+
+.site-hero::before {
+  background-position: center;
+  opacity: 0.58;
+}
+
+.site-hero-content {
+  max-width: 700px;
   font-family: var(--heading);
-  font-size: 1.35rem;
-  text-transform: uppercase;
+  font-size: clamp(2.5rem, 5.3vw, 4.5rem);
+  font-weight: var(--semi-bold);
+  line-height: 1.05;
+  text-shadow: 0 2px 18px rgb(0 0 0 / 55%);
 }
 
-nav > a {
-  padding: 5px;
-}
-
-nav > a:hover {
-  color: var(--rust);
-}
-
-header:not([data-big]) {
-  @media (max-width: $collapse) {
-    justify-content: flex-end;
-
-    .nav-toggle {
-      display: flex;
-    }
-
-    .nav-toggle:not(:checked) + nav {
-      display: none;
-    }
-
-    nav {
-      align-items: flex-end;
-      flex-direction: column;
-      font-size: var(--large);
-      width: 100%;
-    }
-  }
-}
-
-header[data-big] {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: $big-padding 20px;
-
-  @if $sticky {
-    top: unset;
-  }
-
-  .home {
-    flex-direction: column;
-    flex-grow: 0;
+@media (max-width: $collapse) {
+  .header-bar {
+    flex-wrap: wrap;
+    min-height: 74px;
+    padding: 10px 22px;
   }
 
   .logo {
-    height: $logo-big;
-    flex-shrink: 0;
-  }
-
-  .title-text {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    height: 50px;
   }
 
   .title {
-    font-size: var(--xxl);
+    font-size: 1.25rem;
   }
 
-  .subtitle {
-    font-size: var(--large);
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
   }
 
-  nav {
-    font-size: 1.55rem;
+  .nav-toggle:not(:checked) + nav {
+    display: none;
+  }
+
+  .header-bar nav {
+    width: 100%;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 0;
+  }
+
+  .site-hero {
+    min-height: 300px;
+    padding: 40px 28px;
   }
 }
