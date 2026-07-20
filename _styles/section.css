@@ -32,4 +32,8 @@ main > section:nth-of-type(even) {
   background: var(--background-alt);
 }
 
+main > section:has(.team-page) {
+  background: var(--background-alt);
+}
+
 /*# sourceMappingURL=section.css.map */

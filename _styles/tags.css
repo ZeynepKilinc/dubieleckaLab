@@ -32,4 +32,24 @@
   color: var(--background);
 }
 
+.tag-community {
+  background: #49758f;
+  color: #ffffff;
+}
+
+.tag-presentations {
+  background: #9c3428;
+  color: #ffffff;
+}
+
+.tag-milestones {
+  background: #d8a84e;
+  color: #2d241f;
+}
+
+.tag-alumni {
+  background: #59412f;
+  color: #ffffff;
+}
+
 /*# sourceMappingURL=tags.css.map */

@@ -1,24 +1,111 @@
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  padding: 40px;
+footer.background {
+  display: grid;
+  gap: 34px;
+  padding: 48px max(40px, (100% - 1100px) / 2);
+  background: #59412f;
+  color: #f5f3ed;
   line-height: var(--spacing);
   box-shadow: var(--shadow);
+  text-align: left;
+}
+
+footer.background::before {
+  display: none;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: minmax(260px, 1.6fr) minmax(180px, 1fr);
+  gap: 60px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--heading);
+  font-size: 1.65rem;
+  font-weight: var(--semi-bold);
+  text-decoration: none;
+}
+
+.footer-brand img {
+  width: 62px;
+  height: 62px;
+  object-fit: contain;
+}
+
+.footer-identity address {
+  margin-top: 22px;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.footer-nav {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  grid-template-rows: repeat(3, auto);
+  grid-auto-flow: column;
+  align-content: start;
+  gap: 8px 30px;
+}
+
+.footer-nav a {
+  color: var(--amber) !important;
+  font-weight: var(--semi-bold);
+  text-decoration: none;
 }
 
 footer a {
-  color: var(--text) !important;
+  color: #f5f3ed !important;
 }
 
 footer a:hover {
   color: var(--primary) !important;
 }
 
-footer .icon {
-  font-size: var(--xl);
+.footer-meta {
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+}
+
+.footer-contribution {
+  justify-self: center;
+  text-align: center;
+}
+
+.footer-contribution p {
+  color: #f5f3ed;
+}
+
+footer .dark-toggle {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+}
+
+@media (max-width: 760px) {
+  footer {
+    padding: 40px 28px;
+  }
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-identity {
+    grid-column: auto;
+  }
+}
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+  .footer-nav {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-flow: row;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

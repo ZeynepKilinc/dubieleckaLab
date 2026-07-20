@@ -1,0 +1,43 @@
+.funding-logos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(130px, 1fr));
+  gap: 22px;
+  align-items: stretch;
+  margin: 32px 0 44px;
+}
+
+.funding-logos a {
+  display: grid;
+  place-items: center;
+  min-height: 125px;
+  padding: 22px;
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  background: white;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.funding-logos a:hover {
+  transform: translateY(-3px);
+}
+
+.funding-logos img {
+  width: 100%;
+  max-width: 210px;
+  max-height: 78px;
+  object-fit: contain;
+}
+
+@media (max-width: 760px) {
+  .funding-logos {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+  }
+}
+@media (max-width: 420px) {
+  .funding-logos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=funding.css.map */
