@@ -1,6 +1,10 @@
 {{ " " }}
 {% assign asset_version = site.time | date: "%s" %}
-<div class="past-member-card{% if include.placeholder %} is-placeholder{% endif %}">
+{% if include.link %}
+  <a href="{{ include.link | relative_url | uri_escape }}" class="past-member-card{% if include.placeholder %} is-placeholder{% endif %}">
+{% else %}
+  <div class="past-member-card{% if include.placeholder %} is-placeholder{% endif %}">
+{% endif %}
   <div class="past-member-image">
     <img
       src="{{ include.image | relative_url | uri_escape }}?v={{ asset_version }}"
@@ -11,11 +15,7 @@
   </div>
   <div class="past-member-details">
     <p class="past-member-heading">
-      {% if include.link %}
-        <a href="{{ include.link | relative_url | uri_escape }}" class="past-member-name">{{ include.name }}{% if include.lab_position %},{% endif %}</a>
-      {% else %}
-        <span class="past-member-name">{{ include.name }}{% if include.lab_position %},{% endif %}</span>
-      {% endif %}
+      <span class="past-member-name">{{ include.name }}{% if include.lab_position %},{% endif %}</span>
       {% if include.lab_position %}<span class="past-member-lab-role">{{ include.lab_position }}</span>{% endif %}
     </p>
     {% assign current_position = include.current_position | default: include.next_position %}
@@ -23,4 +23,8 @@
       <p class="past-member-current"><strong>Current position:</strong> {{ current_position }}</p>
     {% endif %}
   </div>
-</div>
+{% if include.link %}
+  </a>
+{% else %}
+  </div>
+{% endif %}

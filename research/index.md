@@ -11,22 +11,6 @@ The Dubielecka Lab studies how aging, chronic inflammation, and the bone marrow 
 
 The lab's translational goal is to identify vulnerabilities that can be used to target disease-initiating malignant hematopoietic stem cells while preserving normal blood formation.
 
-{%
-  include button.html
-  link="https://vivo.brown.edu/display/pdubiele#Research"
-  text="Brown research profile"
-  icon="fa-solid fa-up-right-from-square"
-  style="bare"
-%}
-
-{%
-  include button.html
-  link="https://scholar.google.com/citations?user=Qt3a2qkAAAAJ&hl=en"
-  text="Google Scholar"
-  icon="fa-brands fa-google"
-  style="bare"
-%}
-
 {% include section.html %}
 
 ## Recent Highlights

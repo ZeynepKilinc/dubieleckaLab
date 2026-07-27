@@ -1,0 +1,74 @@
+---
+---
+
+.team-intro-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  margin: 0 calc(50% - 50vw) 36px;
+  padding: 58px max(30px, calc((100% - 720px) / 2));
+  box-sizing: border-box;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.team-intro-hero::before {
+  background: linear-gradient(
+    rgb(60 29 16 / 76%),
+    rgb(60 29 16 / 76%)
+  ), var(--image);
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+}
+
+.team-intro-hero p {
+  position: relative;
+  max-width: 700px;
+  margin: 0;
+  font-family: var(--heading);
+  font-size: clamp(1.2rem, 2.2vw, 1.72rem);
+  font-weight: var(--semi-bold);
+  line-height: 1.42;
+  text-shadow: 0 2px 14px rgb(0 0 0 / 48%);
+}
+
+.team-join-band {
+  margin: 44px calc(50% - 50vw);
+  padding: 58px max(30px, calc((100% - 1000px) / 2));
+  background: #564232;
+  color: #ffffff;
+  text-align: center;
+}
+
+.team-join-band p {
+  max-width: 980px;
+  margin: 0 auto 26px;
+  font-family: var(--heading);
+  font-size: 1.18rem;
+  font-weight: var(--regular);
+  line-height: 1.8;
+}
+
+.team-join-button {
+  background: var(--amber);
+  color: #2d241f;
+}
+
+.team-join-button:hover {
+  background: #ffffff;
+  color: #2d241f;
+}
+
+@media (max-width: 760px) {
+  .team-intro-hero {
+    min-height: 280px;
+    padding: 42px 24px;
+  }
+
+  .team-join-band {
+    padding: 46px 24px;
+  }
+}

@@ -7,11 +7,6 @@
     - myeloproliferative neoplasms
     - JAK2V617F
     - hematopoietic stem cells
-  buttons:
-    - type: external
-      text: Brown profile
-      link: https://vivo.brown.edu/display/pdubiele#Publications
-
 - id: doi:10.1182/bloodadvances.2025018724
   type: paper
   image: https://cdn.ncbi.nlm.nih.gov/pmc/blobs/4869/12955636/8f1aa8542ae3/BLOODA_ADV-2025-018724-ga1.jpg

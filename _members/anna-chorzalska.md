@@ -1,10 +1,10 @@
 ---
-name: Anna Chorzalska
+name: Anna Chorzalska, PhD
 image: images/photo.jpg
-role: 
-group: alum
+description: Assistant Professor
+affiliation: Brown University and Rhode Island Hospital
 links:
-  github: john-doe
+  home-page: https://advancectr.brown.edu/people/anna-d-chorzalska
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Dr. Chorzalska is an Assistant Professor of Medicine (Research) at the Warren Alpert Medical School of Brown University and Rhode Island Hospital. Her research interests include tumor microenvironment features, blood-derived immune parameters, and translational approaches to understanding response to immunotherapies in lymphoma.

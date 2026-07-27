@@ -1,4 +1,10 @@
 ---
+title: Homepage Ver2
+homepage_v2: true
+nav:
+  order: 1.1
+  parent: Publications
+  tooltip: Alternate homepage design
 ---
 
 <section class="home-lab-intro">
@@ -36,7 +42,7 @@ We study how age-related chronic inflammation and the tumor microenvironment inf
 
 {%
   include feature.html
-  image="images/research-highlights-overview.png"
+  image="images/bonaletal.png"
   link="research"
   title="Our Research"
   text=text

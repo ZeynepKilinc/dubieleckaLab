@@ -12,45 +12,58 @@
 }
 
 .tag {
+  --tag-bg: var(--secondary);
+  --tag-text: #ffffff;
+
   max-width: 100%;
   margin: 0;
   padding: 5px 10px;
   border-radius: 999px;
-  background: var(--secondary);
-  color: #2d241f;
+  background: var(--tag-bg);
+  color: var(--tag-text);
   text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  transition: background var(--transition), color var(--transition);
+  transition: filter var(--transition), outline-color var(--transition);
 }
 
 .tag:hover {
-  background: var(--steel);
-  color: var(--background);
+  filter: brightness(0.92);
+  color: var(--tag-text);
 }
 
 .tag[data-active] {
-  background: var(--steel);
-  color: var(--background);
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
 }
 
 .tag-community {
-  background: #49758f;
-  color: #ffffff;
+  --tag-bg: #3c1d10;
+  --tag-text: #ffffff;
 }
 
 .tag-presentations {
-  background: #9c3428;
-  color: #ffffff;
+  --tag-bg: #c37331;
+  --tag-text: #ffffff;
 }
 
 .tag-milestones {
-  background: #d8a84e;
-  color: #2d241f;
+  --tag-bg: #743c1d;
+  --tag-text: #ffffff;
 }
 
 .tag-alumni {
-  background: #59412f;
-  color: #ffffff;
+  --tag-bg: #9b2626;
+  --tag-text: #ffffff;
+}
+
+.tag-palette-5 {
+  --tag-bg: #b6a383;
+  --tag-text: #2d241f;
+}
+
+.tag-palette-6 {
+  --tag-bg: #0c1d2e;
+  --tag-text: #ffffff;
 }

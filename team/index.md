@@ -5,7 +5,16 @@ nav:
   tooltip: About our team
 ---
 
+<section
+  class="team-intro-hero background"
+  style="--image: url('{{ 'images/brown-skyline.png' | relative_url }}')"
+  data-dark="true"
+>
+  <p>Based at Brown University, we investigate the bone marrow microenvironment, chronic inflammation, and aging as drivers of blood cancer, working across collaborative and interdisciplinary teams to translate these discoveries into new therapeutic strategies ...</p>
+</section>
+
 {% include portrait.html lookup="patrycja-dubielecka" %}
+{% include portrait.html lookup="anna-chorzalska" %}
 {% include portrait.html lookup="makayla-pardo" %}
 {% include portrait.html lookup="janet-joseph" %}
 {% include portrait.html lookup="james" %}
@@ -14,6 +23,11 @@ nav:
 {% include portrait.html lookup="zeynep-kilinc" %}
 {% include portrait.html lookup="melanie-villalobos" %}
 {% include portrait.html lookup="john-jack-pulford" %}
+
+<section class="team-join-band">
+  <p>We collaborate with outstanding researchers from around the world and welcome enthusiastic students eager to grow. Together, we push the frontier of translational hematology research.</p>
+  <a class="button team-join-button" href="{{ 'contact' | relative_url }}">Join the Team</a>
+</section>
 
 ## Alumni
 

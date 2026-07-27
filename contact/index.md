@@ -9,6 +9,15 @@ nav:
 
 The Dubielecka Lab is located on the 5th floor of the Coro West Building, housed in Lifespan's outpatient medical center.
 
+For lab inquiries, please contact Dr. Patrycja Dubielecka-Szczerba.
+
+{%
+  include button.html
+  type="email"
+  text="E-mail"
+  link="Patrycja_Dubielecka-Szczerba@brown.edu"
+%}
+
 {%
   include button.html
   type="address"

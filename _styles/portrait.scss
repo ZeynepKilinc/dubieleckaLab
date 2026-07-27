@@ -45,7 +45,7 @@
 
 .portrait-image {
   width: 100%;
-  aspect-ratio: 4 / 4.25;
+  aspect-ratio: 4 / 5.1;
   border-radius: 8px 8px 0 0;
   object-fit: cover;
 }
@@ -71,8 +71,8 @@
 
 .portrait-wrapper:not(.portrait-profile) .portrait-info {
   box-sizing: border-box;
-  height: 132px;
-  min-height: 132px;
+  height: 119px;
+  min-height: 119px;
 }
 
 .portrait-name {

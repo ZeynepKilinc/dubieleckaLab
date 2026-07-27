@@ -1,5 +1,5 @@
 ---
-name: Patrycja Dubielecka
+name: Patrycja Dubielecka, PhD
 image: images/members/patrycja-dubielecka.png
 role: principal-investigator
 links:

@@ -5,6 +5,7 @@ show-title: false
 show-subtitle: false
 logo-text: false
 description: The Dubielecka Lab studies age-related hematologic malignancies, inflammatory signaling, and disease-initiating hematopoietic stem cells.
+baseurl: /dubieleckaLab
 header: images/background.jpg
 footer: images/background.jpg
 proofer: false
