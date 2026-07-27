@@ -1,7 +1,7 @@
 ---
 name: Cristina Huezo Arguello
 image: images/members/cristina-huezo-arguello.png
-description: Master's Student
+description: MSc Student, Biotechnology
 role: masters
 links:
   orcid: https://orcid.org/orcid-search/search?searchQuery=Cristina%20Huezo%20Arguello
