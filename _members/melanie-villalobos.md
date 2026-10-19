@@ -1,6 +1,6 @@
 ---
 name: Melanie Villalobos
-image: images/members/melanie-villalobos.png
+image: images/members/melanie-villalobos.jpg
 description: PhD Student, Pathobiology
 role: pathobiology
 links:

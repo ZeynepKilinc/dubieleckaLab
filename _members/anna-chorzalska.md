@@ -1,6 +1,6 @@
 ---
 name: Anna Chorzalska, PhD
-image: images/photo.jpg
+image: images/anna-chorzalska.jpg
 description: Assistant Professor
 affiliation: Brown University and Rhode Island Hospital
 links:
