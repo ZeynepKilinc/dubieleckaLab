@@ -5,7 +5,7 @@
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
   gap: 40px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .home-lab-copy h1 {
@@ -14,7 +14,7 @@
 
 .home-lab-carousel {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: auto;
   min-height: 420px;
   overflow: hidden;
   border-radius: 8px;
@@ -47,3 +47,136 @@
     min-height: 300px;
   }
 }
+
+main > section:has(.home-lab-intro) {
+  background: #f5efea;
+}
+
+.home-lab-intro {
+  background: #f5efea;
+}
+
+.home-lab-carousel img:first-child:not(.is-active) {
+  opacity: 0;
+}
+
+.photo-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 45%);
+  border-radius: 6px;
+  background: rgb(48 32 25 / 60%);
+  color: #fff4e8;
+  font: 30px/1 sans-serif;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.photo-carousel-arrow.previous { left: 10px; }
+.photo-carousel-arrow.next { right: 10px; }
+.photo-carousel-arrow:hover { background: rgb(48 32 25 / 85%); }
+.photo-carousel-arrow:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .home-lab-carousel img { transition: none; }
+}
+
+main > section:nth-of-type(n):has(.home-lab-showcase) {
+  padding: 0;
+  background: var(--background-alt);
+}
+
+.home-lab-showcase {
+  display: grid;
+  grid-template-columns: minmax(280px, 30%) minmax(0, 1fr);
+  width: 100%;
+  background: #493329;
+}
+
+.home-lab-summary {
+  align-self: center;
+  padding: clamp(28px, 4vw, 60px);
+  color: #fff4e8;
+  text-align: left;
+}
+
+.home-lab-summary h2 {
+  margin: 0 0 24px;
+  padding: 0;
+  border: 0;
+  text-align: left;
+  color: inherit;
+}
+
+.home-lab-summary p { line-height: 1.8; text-align: left; }
+.home-lab-summary a { color: #edc9a2; }
+.lab-slider { position: relative; overflow: hidden; min-width: 0; }
+.lab-slider-track { display: flex; height: 100%; transition: transform 650ms cubic-bezier(.22,.61,.36,1); }
+.lab-slide {
+  position: relative;
+  flex: 0 0 80%;
+  min-width: 0;
+  height: clamp(430px, 40vw, 600px);
+  margin: 0;
+  overflow: hidden;
+}
+.lab-slide img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.lab-slide figcaption {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 30px;
+  padding: 18px 22px;
+  background: rgb(63 39 28 / 80%);
+  color: #fff4e8;
+  font-family: var(--heading);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  text-align: left;
+}
+.lab-slider-arrow {
+  position: absolute;
+  top: 45%;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgb(255 255 255 / 60%);
+  border-radius: 50%;
+  background: rgb(63 39 28 / 75%);
+  color: #fff4e8;
+  font: 30px/1 sans-serif;
+  cursor: pointer;
+}
+.lab-slider-arrow.previous { left: 16px; }
+.lab-slider-arrow.next { right: 16px; }
+.lab-slider-arrow:focus-visible { outline: 3px solid var(--amber); }
+.lab-slider-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@media (max-width: 760px) {
+  .home-lab-showcase { grid-template-columns: 1fr; }
+  .lab-slide { height: 380px; flex-basis: 88%; }
+  .home-lab-summary { padding: 32px 28px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lab-slider-track { transition: none; }
+}
+
+main > section:nth-of-type(n):has(.home-research) {
+  background: #fff;
+  padding: 64px max(28px, calc((100% - 1100px) / 2));
+}
+.home-research > h2 { margin: 0 0 40px; text-align: center; }
+.home-research-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; }
+.home-research-card { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.home-research-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.home-research-card h3 { margin: 26px 0 16px; color: var(--brown); font-size: 1.4rem; line-height: 1.3; }
+.home-research-card p { margin: 0 0 28px; text-align: center; line-height: 1.8; }
+.home-research-card > a { margin-top: auto; padding: 10px 20px; border: 1px solid var(--brown); border-radius: 999px; color: var(--brown); text-decoration: none; }
+.home-research-card > a:hover { color: white; background: var(--brown); }
+@media (max-width: 760px) { .home-research-grid { grid-template-columns: 1fr; gap: 44px; } .home-research-card img { max-width: 440px; } }

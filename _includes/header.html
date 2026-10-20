@@ -109,10 +109,17 @@
   {% if page.url == "/" %}
     <div
       class="site-hero background"
-      style="--image: url('{{ image | relative_url | uri_escape }}?v={{ asset_version }}')"
+      data-parallax-hero
+      data-parallax-strength="16"
       data-dark="true"
     >
-      <div class="site-hero-content">Welcome to the<br>Dubielecka Lab at<br>Brown University</div>
+      <div class="hero-bg" aria-hidden="true">
+        <img src="{{ 'images/marrow-he.webp' | relative_url }}" alt="" fetchpriority="high">
+      </div>
+      <div class="site-hero-content">
+        <p class="site-hero-eyebrow">Brown University</p>
+        <h1>Decoding the bone marrow niche<br>in leukemia and treatment response</h1>
+      </div>
     </div>
   {% endif %}
   {% endif %}

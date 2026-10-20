@@ -1,70 +1,53 @@
 ---
 ---
 
-<section class="home-lab-intro">
-  <div class="home-lab-copy">
-    <h1 id="our-lab">Our Lab</h1>
-    <p>Advancing age is the single most significant risk factor for the development of most cancers, including hematological malignancies. As the aging of the human population accelerates and the associated health burden expands, it is critical to uncover the molecular underpinnings of age-related neoplasms in order to develop effective therapeutic strategies. Our laboratory focuses on interrogating the effects of age-related chronic inflammation on the malignant transformation of hematopoietic stem cells leading to the development of blood neoplasms.</p>
-    <p>We are interested in outlining how the aging microenvironment affects homeostasis of hematopoietic stem cells and the blood-producing system as a whole. Reciprocally, we are also interested in assessing how malignant stem cells affect and harness the microenvironment to support their systemic retention and blood cancer recurrence. Our ultimate goal is that our findings inform new therapeutic strategies to eradicate disease-initiating malignant hematopoietic stem cells.</p>
+<div class="home-research">
+  <h2 id="our-research">Our Research</h2>
+  <div class="home-research-grid">
+    <article class="home-research-card">
+      <img src="{{ 'images/marrow-he.webp' | relative_url }}" alt="Bone marrow tissue illustration">
+      <h3>Aging &amp; Inflammation</h3>
+      <p>We investigate how age-related chronic inflammation changes the bone marrow microenvironment and affects the homeostasis and malignant transformation of hematopoietic stem cells.</p>
+      <a href="{{ '/projects/' | relative_url }}">Explore our research</a>
+    </article>
+    <article class="home-research-card">
+      <img src="{{ 'images/research-highlights-overview.png' | relative_url }}" alt="Overview of the lab’s blood cancer research">
+      <h3>Blood Cancer Stem Cells</h3>
+      <p>We study how disease-initiating stem cells interact with their niche to sustain the development, progression, and relapse of myeloproliferative neoplasms.</p>
+      <a href="{{ '/research/' | relative_url }}">Read our publications</a>
+    </article>
+    <article class="home-research-card">
+      <img src="{{ 'images/projects-lab-discussion.png' | relative_url }}" alt="Lab members discussing research">
+      <h3>Translational Hematology</h3>
+      <p>Our work combines stem cell biology, immunophenotyping, and molecular profiling to identify vulnerabilities in malignant cells and inform new therapeutic strategies.</p>
+      <a href="{{ '/technologies-and-approaches/' | relative_url }}">Our approaches</a>
+    </article>
   </div>
-  <div class="home-lab-carousel" aria-label="Dubielecka Lab photo display">
-    <img src="{{ 'images/lab-group.png' | relative_url }}" alt="Dubielecka Lab group photo">
-    <img src="{{ 'images/projects-lab-discussion.png' | relative_url }}" alt="Lab members discussing research plans">
-    <img src="{{ 'images/background.jpg' | relative_url }}" alt="Coro West Building exterior">
+</div>
+
+{% include section.html %}
+
+<div class="home-lab-showcase">
+  <div class="home-lab-summary">
+    <h2 id="our-lab">Our Lab</h2>
+    <p>We study how aging, chronic inflammation, and the bone marrow microenvironment drive blood cancers. Our goal is to identify new ways to target disease-initiating stem cells and prevent relapse.</p>
+    <a href="{{ '/team/' | relative_url }}">Meet our team →</a>
   </div>
-</section>
+  <div class="lab-slider" role="region" aria-label="Life in the Dubielecka Lab" aria-roledescription="carousel" tabindex="0">
+    <div class="lab-slider-track">
+      <figure class="lab-slide"><img src="{{ 'images/lab-group.png' | relative_url }}" alt="Dubielecka Lab group photo"><figcaption>A collaborative community studying blood cancer.</figcaption></figure>
+      <figure class="lab-slide"><img src="{{ 'images/projects-lab-discussion.png' | relative_url }}" alt="Lab members discussing research plans"><figcaption>Bringing ideas together to advance hematology research.</figcaption></figure>
+      <figure class="lab-slide"><img src="{{ 'images/background.jpg' | relative_url }}" alt="Coro West Building exterior"><figcaption>Our home at the Coro West Building in Providence.</figcaption></figure>
+    </div>
+    <button class="lab-slider-arrow previous" type="button" aria-label="Previous lab photo">‹</button>
+    <button class="lab-slider-arrow next" type="button" aria-label="Next lab photo">›</button>
+    <span class="lab-slider-status" aria-live="polite"></span>
+  </div>
+</div>
 
 {% include section.html %}
 
 ## Highlights
-
-{% capture text %}
-
-We study how age-related chronic inflammation and the tumor microenvironment influence hematopoietic stem cells, blood cancer-initiating stem cells, and the development, progression, and relapse of myeloproliferative neoplasms.
-
-{%
-  include button.html
-  link="research"
-  text="See our publications"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/research-highlights-overview.png"
-  link="research"
-  title="Our Research"
-  text=text
-%}
-
-{% capture text %}
-
-Our projects combine translational hematology, stem cell biology, immunophenotyping, and molecular profiling to understand how malignant clones and their microenvironment sustain blood cancer progression and recurrence.
-
-{%
-  include button.html
-  link="projects"
-  text="Explore our research"
-  icon="fa-solid fa-arrow-right"
-  flip=true
-  style="bare"
-%}
-
-{% endcapture %}
-
-{%
-  include feature.html
-  image="images/projects-lab-discussion.png"
-  link="projects"
-  title="Our Research"
-  flip=true
-  style="bare"
-  text=text
-%}
 
 {% capture text %}
 
