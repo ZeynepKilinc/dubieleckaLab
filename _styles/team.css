@@ -65,5 +65,81 @@
     padding: 46px 24px;
   }
 }
+.team-pi {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 60px);
+  align-items: start;
+  margin: 28px 20px 40px;
+  padding: 20px 0 32px;
+  border-bottom: 1px solid var(--light-gray);
+  text-align: left;
+}
+
+.team-pi-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4/5.1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.team-pi-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.team-pi-role {
+  margin: 0 0 8px;
+  color: var(--rust);
+  font-family: var(--heading);
+  font-weight: var(--semi-bold);
+}
+
+.team-pi-heading h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--brown);
+  font-size: clamp(1.6rem, 2.6vw, 2.3rem);
+  text-align: left;
+  text-transform: none;
+}
+
+.team-pi-bio-link {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 2px solid var(--brown);
+  border-radius: 999px;
+  color: var(--brown);
+  font-family: var(--heading);
+  font-weight: var(--semi-bold);
+  text-decoration: none;
+}
+
+.team-pi-bio-link:hover {
+  background: var(--brown);
+  color: white;
+}
+
+.team-pi-biography p {
+  margin: 0;
+  text-align: left;
+  line-height: 1.8;
+}
+
+@media (max-width: 760px) {
+  .team-pi {
+    grid-template-columns: 1fr;
+  }
+  .team-pi-photo {
+    width: min(100%, 190px);
+    justify-self: center;
+  }
+}
 
 /*# sourceMappingURL=team.css.map */
