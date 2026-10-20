@@ -14,7 +14,7 @@ nav:
     <p>We are interested in outlining how the aging microenvironment affects homeostasis of hematopoietic stem cells and the blood-producing system as a whole. Reciprocally, we are also interested in assessing how malignant stem cells affect and harness the microenvironment to support their systemic retention and blood cancer recurrence. Our ultimate goal is that our findings inform new therapeutic strategies to eradicate disease-initiating malignant hematopoietic stem cells.</p>
   </div>
   <div class="home-lab-carousel" aria-label="Dubielecka Lab photo display">
-    <img src="{{ 'images/lab-group.png' | relative_url }}" alt="Dubielecka Lab group photo">
+    <img src="{{ 'images/lab-group-highres.jpg' | relative_url }}" alt="Dubielecka Lab group photo">
     <img src="{{ 'images/projects-lab-discussion.png' | relative_url }}" alt="Lab members discussing research plans">
     <img src="{{ 'images/background.jpg' | relative_url }}" alt="Coro West Building exterior">
   </div>
@@ -89,7 +89,7 @@ Our lab brings together trainees, scientists, and clinical collaborators studyin
 
 {%
   include feature.html
-  image="images/lab-group.png"
+  image="images/lab-group-highres.jpg"
   link="team"
   title="Our Lab"
   text=text

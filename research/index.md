@@ -1,27 +1,24 @@
 ---
 title: Publications
+hide_citation_descriptions: true
 nav:
   order: 6
   tooltip: Published works
 ---
 
-# {% include icon.html icon="fa-solid fa-microscope" %}Publications
-
-The Dubielecka Lab studies how aging, chronic inflammation, and the bone marrow microenvironment shape hematopoietic stem cell behavior and the development, progression, and relapse of blood cancers. Our work focuses on myeloproliferative neoplasms and other hematologic disease settings where malignant stem cells interact with immune and stromal signals in their niche.
-
-The lab's translational goal is to identify vulnerabilities that can be used to target disease-initiating malignant hematopoietic stem cells while preserving normal blood formation.
-
-{% include section.html %}
-
-## Recent Highlights
+## Highlights
 
 {% include citation.html lookup="doi:10.1182/blood.2024027125" style="rich" %}
 
-{% include citation.html lookup="Impact of statin use on cardiovascular and hematologic outcomes" style="rich" %}
+{% include section.html %}
 
-{% include citation.html lookup="Low serum cholesterol is a biomarker" style="rich" %}
+## Publications
 
-{% include citation.html lookup="Alterations in the humoral immunophenotype" style="rich" %}
+{% include search-box.html %}
+
+{% include search-info.html %}
+
+{% include list.html data="citations" component="citation" style="rich" %}
 
 {% include section.html %}
 
@@ -72,13 +69,3 @@ Recent work highlights low-frequency JAK2V617F clones, cardiovascular comorbidit
     <img src="{{ 'images/funding/ash.svg' | relative_url }}" alt="American Society of Hematology">
   </a>
 </div>
-
-{% include section.html %}
-
-## Publications
-
-{% include search-box.html %}
-
-{% include search-info.html %}
-
-{% include list.html data="citations" component="citation" style="rich" %}

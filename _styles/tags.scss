@@ -67,3 +67,13 @@
   --tag-bg: #0c1d2e;
   --tag-text: #ffffff;
 }
+
+.citation .tag {
+  --tag-bg: #e9e0d7;
+  --tag-text: #50392c;
+  border: 1px solid #cbb9a8;
+}
+
+.citation .tag:hover {
+  --tag-bg: #dccbbb;
+}

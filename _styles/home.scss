@@ -180,3 +180,41 @@ main > section:nth-of-type(n):has(.home-research) {
 .home-research-card > a { margin-top: auto; padding: 10px 20px; border: 1px solid var(--brown); border-radius: 999px; color: var(--brown); text-decoration: none; }
 .home-research-card > a:hover { color: white; background: var(--brown); }
 @media (max-width: 760px) { .home-research-grid { grid-template-columns: 1fr; gap: 44px; } .home-research-card img { max-width: 440px; } }
+
+.lab-slide-coro img {
+  transform: scale(1.22);
+  transform-origin: 35% 20%;
+}
+
+.lab-slide figcaption {
+  left: 50%;
+  right: auto;
+  bottom: 30px;
+  width: max-content;
+  max-width: calc(100% - 56px);
+  padding: 16px 22px;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.lab-slide-discussion figcaption {
+  left: 9%;
+  bottom: 8%;
+  max-width: 48%;
+  transform: none;
+}
+
+.lab-slide-coro figcaption {
+  bottom: 18%;
+  max-width: 58%;
+}
+
+@media (max-width: 760px) {
+  .lab-slide-discussion figcaption {
+    left: 7%;
+    max-width: 65%;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+  .lab-slide-coro figcaption { max-width: 75%; }
+}
