@@ -5,6 +5,7 @@ for (const carousel of carousels) {
   const images = [...carousel.querySelectorAll(":scope > img")];
   if (images.length < 2) continue;
 
+  const manual = carousel.classList.contains("home-lab-carousel");
   let activeIndex = 0;
   let timer;
 
@@ -38,14 +39,33 @@ for (const carousel of carousels) {
 
   function startTimer() {
     clearInterval(timer);
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (!manual && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       timer = setInterval(() => show(activeIndex + 1), 6000);
     }
   }
 
   carousel.addEventListener("mouseenter", () => clearInterval(timer));
   carousel.addEventListener("mouseleave", startTimer);
-  carousel.append(dots);
+  if (manual) {
+    for (const [direction, label, symbol] of [[-1, "Previous photo", "‹"], [1, "Next photo", "›"]]) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = `photo-carousel-arrow ${direction < 0 ? "previous" : "next"}`;
+      button.setAttribute("aria-label", label);
+      button.textContent = symbol;
+      button.addEventListener("click", () => show(activeIndex + direction));
+      carousel.append(button);
+    }
+    carousel.tabIndex = 0;
+    carousel.addEventListener("keydown", event => {
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+        event.preventDefault();
+        show(activeIndex + (event.key === "ArrowLeft" ? -1 : 1));
+      }
+    });
+  } else {
+    carousel.append(dots);
+  }
   show(0);
   startTimer();
 }
