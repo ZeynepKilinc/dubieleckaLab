@@ -1,0 +1,18 @@
+{% assign pi = site.members | where: "slug", "patrycja-dubielecka" | first %}
+<section class="team-pi" aria-labelledby="team-pi-name">
+  <a class="team-pi-photo" href="{{ pi.url | relative_url }}" aria-label="Read Patrycja Dubielecka’s full biography">
+    <img src="{{ pi.image | relative_url }}" alt="{{ pi.name }}" loading="eager">
+  </a>
+  <div class="team-pi-copy">
+    <div class="team-pi-heading">
+      <div>
+        <p class="team-pi-role">Principal Investigator</p>
+        <h2 id="team-pi-name">{{ pi.name }}</h2>
+      </div>
+      <a class="team-pi-bio-link" href="{{ pi.url | relative_url }}">Patrycja’s Full Bio</a>
+    </div>
+    <div class="team-pi-biography">
+      <p>Dr. Dubielecka is an Associate Professor of Medicine at Brown University and Director of Translational Hematology at Rhode Island Hospital. Her research focuses on blood cancer-initiating stem cells and their role in the development, progression, and relapse of myeloproliferative neoplasms, with the goal of identifying new therapeutic strategies.</p>
+    </div>
+  </div>
+</section>

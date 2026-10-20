@@ -1,11 +1,11 @@
 ---
 title: News
 nav:
-  order: 4
+  order: 7
   tooltip: Lab news and highlights
 ---
 
-# Lab Updates
+# News
 
 ## Highlights
 

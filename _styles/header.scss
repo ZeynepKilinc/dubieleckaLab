@@ -57,9 +57,10 @@ $collapse: 760px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 26px;
+  gap: 12px 22px;
+  flex-wrap: wrap;
   font-family: var(--heading);
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .header-bar nav > a,
@@ -328,4 +329,61 @@ $collapse: 760px;
     padding: 12px 18px;
     font-size: 0.95rem;
   }
+}
+
+/* About is a disclosure menu without a landing page. */
+.about-nav {
+  display: block;
+  overflow: visible;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.about-nav summary {
+  margin: 0;
+  cursor: pointer;
+  list-style: none;
+  padding: 8px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.about-nav summary::before {
+  content: none;
+}
+
+.about-nav[open] summary,
+.about-nav summary:hover {
+  background: transparent;
+}
+
+.about-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.about-nav summary:hover,
+.about-nav summary:focus-visible {
+  color: var(--rust);
+  border-bottom-color: var(--amber);
+}
+
+.about-nav[open] > .nav-dropdown {
+  display: block;
+}
+
+.homepage-v2-nav .about-nav .nav-dropdown a {
+  color: var(--text);
+  text-shadow: none;
+}
+
+@media (max-width: $collapse) {
+  .about-nav .nav-dropdown a {
+    white-space: normal;
+  }
+}
+
+.about-nav .nav-dropdown a {
+  text-align: right;
 }

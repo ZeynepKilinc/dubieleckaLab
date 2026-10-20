@@ -48,7 +48,7 @@ Our projects combine translational hematology, stem cell biology, immunophenotyp
 {%
   include button.html
   link="projects"
-  text="Browse our projects"
+  text="Explore our research"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -60,7 +60,7 @@ Our projects combine translational hematology, stem cell biology, immunophenotyp
   include feature.html
   image="images/projects-lab-discussion.png"
   link="projects"
-  title="Our Projects"
+  title="Our Research"
   flip=true
   style="bare"
   text=text

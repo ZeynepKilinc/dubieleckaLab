@@ -1,0 +1,9 @@
+<details class="nav-item about-nav">
+  <summary>About <span aria-hidden="true">▾</span></summary>
+  <div class="nav-dropdown">
+    {% assign about_pages = site.pages | where: "nav.parent", "About" | sort: "nav.order" %}
+    {% for about_page in about_pages %}
+      <a href="{{ about_page.dir | relative_url | uri_escape }}">{{ about_page.title }}</a>
+    {% endfor %}
+  </div>
+</details>

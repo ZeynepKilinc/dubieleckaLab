@@ -27,6 +27,7 @@
       </a>
 
       <nav class="homepage-v2-nav" aria-label="Homepage version 2 navigation">
+        {% include about-nav.html %}
         {% assign pages = site.pages
           | where_exp: "page", "page.nav"
           | sort: "nav.order"
@@ -74,6 +75,7 @@
     <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 
     <nav>
+      {% include about-nav.html %}
       {% assign pages = site.pages
         | where_exp: "page", "page.nav"
         | sort: "nav.order"

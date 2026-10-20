@@ -1,7 +1,8 @@
 ---
 title: Our Team
 nav:
-  order: 3
+  parent: About
+  order: 2
   tooltip: About our team
 ---
 
@@ -13,7 +14,7 @@ nav:
   <p>Based at Brown University, we investigate the bone marrow microenvironment, chronic inflammation, and aging as drivers of blood cancer, working across collaborative and interdisciplinary teams to translate these discoveries into new therapeutic strategies ...</p>
 </section>
 
-{% include portrait.html lookup="patrycja-dubielecka" %}
+{% include pi-feature.html %}
 {% include portrait.html lookup="anna-chorzalska" %}
 {% include portrait.html lookup="makayla-pardo" %}
 {% include portrait.html lookup="janet-joseph" %}
