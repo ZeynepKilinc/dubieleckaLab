@@ -1,0 +1,80 @@
+.opportunity-shared-form {
+  max-width: 760px;
+  margin: 40px auto 0;
+  padding: 32px;
+  border-top: 1px solid var(--light-gray);
+  text-align: center;
+}
+
+.opportunity-shared-form h2 {
+  margin: 0 0 18px;
+  border: 0;
+  text-align: center;
+}
+
+.opportunity-shared-form p {
+  text-align: center;
+}
+
+.opportunity-form-button {
+  margin: 12px 0 0;
+  padding: 12px 28px;
+  border: 1px solid #b8a18d;
+  border-radius: 999px;
+  background: #e5d9cd;
+  color: #665346;
+  font: inherit;
+  cursor: not-allowed;
+}
+
+.opportunity-form-note {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  color: #715e50;
+}
+
+main > section:nth-of-type(n):has(.opportunities-intro) {
+  background: #493329;
+  color: #fff4e8;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.opportunities-intro h1 {
+  color: inherit;
+  margin-top: 0;
+}
+
+.opportunities-intro p {
+  color: inherit;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 24px auto 0;
+  text-align: center;
+}
+
+.opportunities-intro a {
+  color: #edc9a2;
+}
+
+main > section:nth-of-type(n):has(.opportunities-intro) {
+  padding: 0;
+  background: transparent;
+}
+
+.opportunities-hero.team-intro-hero {
+  margin: 0;
+}
+
+.opportunities-intro .opportunities-hero p {
+  max-width: 700px;
+  margin: 0;
+  font-family: var(--heading);
+  font-size: clamp(1.2rem, 2.2vw, 1.72rem);
+  font-weight: var(--semi-bold);
+  line-height: 1.42;
+  text-align: center;
+}
+
+/*# sourceMappingURL=opportunities.css.map */
