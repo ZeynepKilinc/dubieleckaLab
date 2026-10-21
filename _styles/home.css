@@ -329,5 +329,37 @@ main > section:nth-of-type(n):has(.home-research) {
     max-width: 75%;
   }
 }
+.research-area-grid {
+  margin: 42px 0 24px;
+}
+
+.research-area-schematic img {
+  object-fit: contain;
+  background: white;
+}
+
+.research-image-credit {
+  color: var(--gray);
+  font-size: 0.78rem;
+  text-align: right;
+}
+
+.home-lab-summary h2 {
+  font-size: clamp(1.8rem, 2.6vw, 2.3rem);
+}
+
+.home-lab-summary p {
+  font-size: clamp(1.1rem, 1.45vw, 1.3rem);
+  line-height: 1.75;
+}
+
+.home-lab-summary > a {
+  font-size: 1.1rem;
+}
+
+.home-research-card h3 {
+  width: 100%;
+  text-align: center;
+}
 
 /*# sourceMappingURL=home.css.map */

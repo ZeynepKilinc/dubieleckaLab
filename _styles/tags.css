@@ -74,4 +74,32 @@
   --tag-bg: #dccbbb;
 }
 
+/* A consistent, restrained palette for the News category filters. */
+.tag-milestones,
+.tag-alumni,
+.tag-community,
+.tag-presentations {
+  --tag-bg: #e9e1d8;
+  --tag-text: #503b2e;
+  border: 1px solid #c9b9a8;
+}
+
+.tag-milestones:hover,
+.tag-alumni:hover,
+.tag-community:hover,
+.tag-presentations:hover {
+  --tag-bg: #ded0c1;
+  filter: none;
+}
+
+.tag-milestones[data-active],
+.tag-alumni[data-active],
+.tag-community[data-active],
+.tag-presentations[data-active] {
+  --tag-bg: #594131;
+  --tag-text: #fff7ee;
+  border-color: #594131;
+  outline-color: #8a705b;
+}
+
 /*# sourceMappingURL=tags.css.map */
