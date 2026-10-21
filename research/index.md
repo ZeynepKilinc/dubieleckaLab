@@ -1,6 +1,7 @@
 ---
 title: Publications
 hide_citation_descriptions: true
+hide_citation_tags: true
 nav:
   order: 6
   tooltip: Published works

@@ -98,9 +98,11 @@
           </div>
         {% endif %}
 
+        {% unless page.hide_citation_tags %}
         {% if citation.tags.size > 0 or citation.repo %}
           {% include tags.html tags=citation.tags repo=citation.repo %}
         {% endif %}
+        {% endunless %}
       {% endif %}
     </div>
   </div>

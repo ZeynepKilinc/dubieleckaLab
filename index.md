@@ -6,21 +6,21 @@
   <div class="home-research-grid">
     <article class="home-research-card">
       <img src="{{ 'images/marrow-he.webp' | relative_url }}" alt="Bone marrow tissue illustration">
-      <h3>Aging &amp; Inflammation</h3>
+      <h3>Discovering the Effects of the Aging Bone Marrow Microenvironment</h3>
       <p>We investigate how age-related chronic inflammation changes the bone marrow microenvironment and affects the homeostasis and malignant transformation of hematopoietic stem cells. Placeholder our research 1</p>
       <a href="{{ '/projects/' | relative_url }}">Explore our research</a>
     </article>
     <article class="home-research-card">
       <img src="{{ 'images/research-highlights-overview.png' | relative_url }}" alt="Overview of the lab’s blood cancer research">
-      <h3>Blood Cancer Stem Cells</h3>
+      <h3>Understanding how Malignant Cells Utilize the Microenvironment to Grow</h3>
       <p>We study how disease-initiating stem cells interact with their niche to sustain the development, progression, and relapse of myeloproliferative neoplasms. Placeholder our research 2</p>
       <a href="{{ '/research/' | relative_url }}">Read our publications</a>
     </article>
     <article class="home-research-card">
       <img src="{{ 'images/projects-lab-discussion.png' | relative_url }}" alt="Lab members discussing research">
-      <h3>Translational Hematology</h3>
+      <h3>Inform Therapeutic Strategies to Eradicate Disease-initiating Stem Cells</h3>
       <p>Our work combines stem cell biology, immunophenotyping, and molecular profiling to identify vulnerabilities in malignant cells and inform new therapeutic strategies. Placeholder our research 3</p>
-      <a href="{{ '/technologies-and-approaches/' | relative_url }}">Our approaches</a>
+      <a href="{{ '/projects/#technologies-and-approaches' | relative_url }}">Our approaches</a>
     </article>
   </div>
 </div>

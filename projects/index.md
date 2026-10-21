@@ -1,27 +1,39 @@
 ---
 title: Research
+redirect_from:
+  - /technologies-and-approaches/
 nav:
   order: 1
   tooltip: Our research
 ---
 
-# {% include icon.html icon="fa-solid fa-microscope" %}Research
+# Research
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Our research investigates how aging, chronic inflammation, and the bone marrow microenvironment shape blood cancer development, progression, and relapse.
 
-{% include tags.html tags="publication, resource, website" %}
+## Research Focus
 
-{% include search-info.html %}
+### Discovering the Effects of the Aging Bone Marrow Microenvironment
+
+We investigate how age-related inflammatory signals alter hematopoietic stem cell homeostasis and contribute to malignant transformation.
+
+### Understanding how Malignant Cells Utilize the Microenvironment to Grow
+
+We study the interactions between malignant stem cells and immune and stromal cells that support disease persistence and recurrence.
+
+### Inform Therapeutic Strategies to Eradicate Disease-initiating Stem Cells
+
+Our goal is to identify vulnerabilities in malignant stem cells that can inform therapies while preserving normal blood formation.
 
 {% include section.html %}
 
-## Featured
+## Technologies and Approaches
 
-{% include list.html component="card" data="projects" filter="group == 'featured'" %}
+Our work combines complementary experimental and computational approaches to connect stem cell biology with translational hematology.
 
-{% include section.html %}
+- **Stem cell biology:** studying the behavior of normal and malignant hematopoietic stem cells.
+- **Immunophenotyping:** examining immune cell populations and disease-associated changes.
+- **Molecular profiling:** investigating inflammatory signaling and the bone marrow microenvironment.
+- **Computational analysis:** integrating molecular and cellular data to explore disease mechanisms.
 
-## More
-
-{% include list.html component="card" data="projects" filter="!group" style="small" %}
+[Explore our publications]({{ '/research/' | relative_url }})

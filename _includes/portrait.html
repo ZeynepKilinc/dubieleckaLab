@@ -11,14 +11,6 @@
 {% assign asset_version = site.time | date: "%s" %}
 
 <div class="portrait-wrapper{% if page.slug == member.slug %} portrait-profile{% endif %}">
-  {% assign social_keys = "orcid,google-scholar,linkedin,twitter,github" | split: "," %}
-  {% assign has_social_links = false %}
-  {% for key in social_keys %}
-    {% if member.links[key] %}
-      {% assign has_social_links = true %}
-    {% endif %}
-  {% endfor %}
-
   <div class="portrait" data-style="{{ include.style }}">
     <a
       {% if page.slug != member.slug %}
@@ -60,29 +52,6 @@
         </span>
       {% endif %}
 
-      {% if has_social_links and page.slug == member.slug %}
-        <div class="portrait-socials" aria-label="{{ member.name }} profile links">
-          {% for key in social_keys %}
-            {% assign value = member.links[key] %}
-            {% if value %}
-              {% assign social = site.data.types[key] %}
-              {% if value contains "http" %}
-                {% assign link = value %}
-              {% else %}
-                {% assign link = social.link | replace: "$VALUE", value %}
-              {% endif %}
-              <a
-                href="{{ link | uri_escape }}"
-                class="portrait-social"
-                data-tooltip="{{ social.tooltip }}"
-                aria-label="{{ member.name }} {{ social.tooltip }}"
-              >
-                {% include icon.html icon=social.icon %}
-              </a>
-            {% endif %}
-          {% endfor %}
-        </div>
-      {% endif %}
     </div>
   </div>
 </div>
