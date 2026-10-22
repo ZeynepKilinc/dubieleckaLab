@@ -362,4 +362,30 @@ main > section:nth-of-type(n):has(.home-research) {
   text-align: center;
 }
 
+.research-area-grid .home-research-card img {
+  object-fit: cover;
+  aspect-ratio: 16/10;
+  border-radius: 8px;
+}
+
+.research-area-grid .home-research-card:nth-child(2) img {
+  object-position: center 38%;
+}
+
+.research-area-grid .home-research-card:nth-child(3) img {
+  object-position: 35% center;
+}
+
+.research-area-grid .home-research-card:nth-child(1) img {
+  object-position: center 65%;
+}
+
+.research-area-grid .home-research-card:nth-child(2) img {
+  object-position: center;
+}
+
+.research-area-grid .home-research-card:nth-child(3) img {
+  object-position: center 55%;
+}
+
 /*# sourceMappingURL=home.css.map */
