@@ -37,7 +37,7 @@
             {% assign children = pages | where: "nav.parent", nav_page.title %}
             <span class="nav-item{% if children.size > 0 %} has-dropdown{% endif %}">
             <a
-              href="{{ nav_page.dir | relative_url | uri_escape }}"
+              href="{{ nav_page.url | relative_url | uri_escape }}"
             >
               {{ nav_page.title }}
             </a>
@@ -45,7 +45,7 @@
               <span class="nav-dropdown">
                 {% for child in children %}
                   <a
-                    href="{{ child.dir | relative_url | uri_escape }}"
+                    href="{{ child.url | relative_url | uri_escape }}"
                   >
                     {{ child.title }}
                   </a>
@@ -85,7 +85,7 @@
           {% assign children = pages | where: "nav.parent", nav_page.title %}
           <span class="nav-item{% if children.size > 0 %} has-dropdown{% endif %}">
           <a
-            href="{{ nav_page.dir | relative_url | uri_escape }}"
+            href="{{ nav_page.url | relative_url | uri_escape }}"
           >
             {{ nav_page.title }}
           </a>
@@ -93,7 +93,7 @@
             <span class="nav-dropdown">
               {% for child in children %}
                 <a
-                  href="{{ child.dir | relative_url | uri_escape }}"
+                  href="{{ child.url | relative_url | uri_escape }}"
                 >
                   {{ child.title }}
                 </a>

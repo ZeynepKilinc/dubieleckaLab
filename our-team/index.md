@@ -1,4 +1,5 @@
 ---
+permalink: /team/
 title: Our Team
 nav:
   parent: About

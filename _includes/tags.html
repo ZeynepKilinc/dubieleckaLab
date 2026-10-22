@@ -5,7 +5,7 @@
   | array_filter
   | uniq
 %}
-{% assign link = include.link | default: page.dir %}
+{% assign link = include.link | default: page.url %}
 {% if tags.size > 0 or include.repo %}
   <div
     class="tags"

@@ -1,4 +1,5 @@
 ---
+permalink: /
 ---
 
 <div class="home-research">

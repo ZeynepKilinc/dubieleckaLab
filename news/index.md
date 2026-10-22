@@ -1,4 +1,5 @@
 ---
+permalink: /blog/
 title: News
 nav:
   order: 7
