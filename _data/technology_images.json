@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "flow",
+    "path": "images/research/technology-flow.png",
+    "title": "Flow cytometer.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Flow_cytometer.png",
+    "author": "Bilal Hussain",
+    "license": "CC0",
+    "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  {
+    "slug": "mass",
+    "path": "images/research/technology-mass.jpg",
+    "title": "CyTOF Phase Zero Prototype May 09 2007.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:CyTOF_Phase_Zero_Prototype_May_09_2007.jpg",
+    "author": "Sergey Vorobiev",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "slug": "spatial",
+    "path": "images/research/technology-spatial.png",
+    "title": "Spatial Transcriptomics Overview.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Spatial_Transcriptomics_Overview.png",
+    "author": "SlifertheRyeDragon",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  {
+    "slug": "single-cell",
+    "path": "images/research/technology-single-cell.webp",
+    "title": "Single-cell RNA sequencing of freshly isolated TEC defines common cell clusters to mTEC and cTEC that are maintained in vitro.webp",
+    "source": "https://commons.wikimedia.org/wiki/File:Single-cell_RNA_sequencing_of_freshly_isolated_TEC_defines_common_cell_clusters_to_mTEC_and_cTEC_that_are_maintained_in_vitro.webp",
+    "author": "Authors of the study: Sara Campinoti, Asllan Gjinovci, Roberta Ragazzini, Luca Zanieri, Linda Ariza-McNaughton, Marco Catucci, Stefan Boeing, Jong-Eun Park, John C. Hutchinson, Miguel Mu\u00f1oz-Ruiz, Pierluigi G. Manti, Gianluca Vozza, Carlo E. Villa, Demetra-Ellie Phylactopoulos, Constance Maurer, Giuseppe Testa, Hans J. Stauss, Sarah A. Teichmann, Neil J. Sebire, Adrian C. Hayday, Dominique Bonnet & Paola Bonfanti",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  },
+  {
+    "slug": "tissue",
+    "path": "images/research/technology-tissue.png",
+    "title": "Bone marrow cellularity in QuPath.png",
+    "source": "https://commons.wikimedia.org/wiki/File:Bone_marrow_cellularity_in_QuPath.png",
+    "author": "Mikael H\u00e4ggstr\u00f6m, M.D. Author info - Reusing images- Conflicts of interest:\u00a0 None\nMikael H\u00e4ggstr\u00f6m, M.D.Consent note: Consent from the patient or patient's relatives is regarded as redundant, because of absence of identifiable features (List of HIPAA identifiers) in the media and case information (See also HIPAA case reports guidance).",
+    "license": "Public domain",
+    "license_url": ""
+  },
+  {
+    "slug": "cellular",
+    "path": "images/research/technology-cellular.jpg",
+    "title": "SK8-18-2 human derived cells, fluorescence microscopy (29942101073).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:SK8-18-2_human_derived_cells,_fluorescence_microscopy_(29942101073).jpg",
+    "author": "ZEISS Microscopy from Germany",
+    "license": "CC BY 2.0",
+    "license_url": "https://creativecommons.org/licenses/by/2.0"
+  },
+  {
+    "slug": "interaction",
+    "path": "images/research/technology-interaction.png",
+    "title": "Protein-protein interaction network from STRING for LIN-52 (red dot).png",
+    "source": "https://commons.wikimedia.org/wiki/File:Protein-protein_interaction_network_from_STRING_for_LIN-52_(red_dot).png",
+    "author": "SharnKB",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0"
+  }
+]
