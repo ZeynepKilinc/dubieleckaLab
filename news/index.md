@@ -1,6 +1,7 @@
 ---
 permalink: /blog/
 title: News
+news_clean_list: true
 nav:
   order: 7
   tooltip: Lab news and highlights
@@ -41,4 +42,6 @@ nav:
 
 {% include search-info.html %}
 
+<div class="news-entry-list">
 {% include list.html data="posts" component="post-excerpt" filter="hidden != true" %}
+</div>

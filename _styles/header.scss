@@ -468,3 +468,37 @@ $collapse: 760px;
   text-transform: none;
   text-align: left;
 }
+
+/* Uppercase navigation with restrained weight and warm site colors. */
+.header-bar nav,
+.homepage-v2-nav {
+  font-family: var(--heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.065em;
+  text-transform: uppercase;
+}
+.header-bar nav .nav-item > a,
+.header-bar nav .about-nav > summary {
+  color: var(--brown);
+}
+.header-bar nav .nav-item > a:hover,
+.header-bar nav .about-nav > summary:hover {
+  color: var(--rust);
+}
+.header-bar nav .nav-dropdown,
+.homepage-v2-nav .nav-dropdown {
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.header-bar nav,
+.homepage-v2-nav {
+  font-size: 0.855rem;
+}
+.header-bar nav .nav-item > a,
+.header-bar nav .about-nav > summary {
+  color: var(--text);
+}

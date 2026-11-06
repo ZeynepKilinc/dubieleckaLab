@@ -48,6 +48,9 @@
     <div class="post-excerpt-text">
       <a href="{{ url }}">{{ title }}</a>
 
+      {% if page.news_clean_list %}
+        <time class="news-entry-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+      {% else %}
       {%
         include post-info.html
         author=post.author
@@ -55,6 +58,7 @@
         updated=post.last_modified_at
         tags=post.tags
       %}
+      {% endif %}
 
       {% assign excerpt = post.content
         | default: ""

@@ -135,3 +135,37 @@
 .news-highlight-slider .highlight-photo-dots button[aria-current="true"] { background: #ffffff; }
 .news-highlight-slider .highlight-photo-dots button:focus-visible,
 .news-highlight-slider .lab-slider-arrow:focus-visible { outline-color: #ffffff; }
+
+/* Editorial rows inspired by Brown's strategic-planning entry list. */
+main > section:nth-of-type(n):has(.news-entry-list) { background: #fff; }
+.news-entry-list { margin-top: 36px; }
+.news-entry-list > h3 { margin: 38px 0 8px; color: #806b58; font-size: 1rem; letter-spacing: .08em; }
+.news-entry-list .post-excerpt {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  align-items: start;
+  gap: 36px;
+  margin: 0;
+  padding: 32px 0;
+  border: 0;
+  border-bottom: 1px solid #e6dfd6;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.news-entry-list .post-excerpt-image { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; border-radius: 0; background: #f2eee6; }
+.news-entry-list .post-excerpt-image img { transition: transform 300ms ease; }
+.news-entry-list .post-excerpt-image:hover img { transform: scale(1.035); }
+.news-entry-list .post-excerpt-text { display: flex; flex-direction: column; gap: 12px; padding: 0; min-width: 0; }
+.news-entry-list .post-excerpt-text > a:first-child { color: #493329; font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.35; font-weight: 600; text-decoration: none; }
+.news-entry-list .post-excerpt-text > a:first-child:hover { text-decoration: underline; text-underline-offset: 5px; }
+.news-entry-date { color: #7b6b5e; font-size: .82rem; letter-spacing: .025em; }
+.news-entry-list .post-excerpt-text > p { color: #514a43; line-height: 1.75; text-align: left; font-size: 1rem; }
+@media (max-width: 760px) {
+  .news-entry-list .post-excerpt { grid-template-columns: 200px minmax(0, 1fr); gap: 24px; }
+}
+@media (max-width: 560px) {
+  .news-entry-list .post-excerpt { grid-template-columns: 1fr; gap: 20px; padding: 26px 0; }
+  .news-entry-list .post-excerpt-image { max-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .news-entry-list .post-excerpt-image img { transition: none; } }
